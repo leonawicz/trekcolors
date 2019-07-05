@@ -1,0 +1,33 @@
+url: http://leonawicz.github.io/trekcolors
+
+template:
+  params:
+    ganalytics: UA-46129458-3
+
+authors:
+  Author Name:
+    href: http://leonawicz.github.io/
+
+reference:
+- title: Package
+  contents:
+  - trekcolors
+- title: Datasets
+  contents:
+  - trekcolors
+
+navbar:
+  type: inverse
+  left:
+    - text: "Home"
+      icon: fa-home
+      href: "index.html"
+    - text: "Get Started"
+      href: "articles/trekcolors.html"
+    - text: "Reference"
+      href: "reference/index.html"
+    - text: "Changelog"
+      href: "news/index.html"
+  right:
+    - icon: fa-github fa-lg
+      href: https://github.com/leonawicz/trekcolors
