@@ -1,0 +1,19 @@
+Package: trekcolors
+Title: Star Trek Color Palettes
+Version: 0.1.0
+Authors@R: person("Matthew", "Leonawicz", email = "matt_leonawicz@esource.com", role = c("aut", "cre"), comment = c(ORCID = "0000-0001-9452-2771"))
+Description: Provides a dataset containing various color palettes based on Star Trek. 
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+URL: https://github.com/leonawicz/trekcolors
+BugReports: https://github.com/leonawicz/trekcolors/issues
+Depends: R (>= 2.10)
+Suggests: 
+    testthat,
+    knitr,
+    rmarkdown,
+    covr
+VignetteBuilder: knitr
+RoxygenNote: 6.1.1
+Language: en-US

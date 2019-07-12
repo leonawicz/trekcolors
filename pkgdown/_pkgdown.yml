@@ -9,12 +9,12 @@ authors:
     href: http://leonawicz.github.io/
 
 reference:
-- title: Package
-  contents:
-  - trekcolors
 - title: Datasets
   contents:
-  - trekcolors
+  - trekpals
+- title: Functions
+  contents:
+  - trekpal
 
 navbar:
   type: inverse
@@ -22,8 +22,6 @@ navbar:
     - text: "Home"
       icon: fa-home
       href: "index.html"
-    - text: "Get Started"
-      href: "articles/trekcolors.html"
     - text: "Reference"
       href: "reference/index.html"
     - text: "Changelog"

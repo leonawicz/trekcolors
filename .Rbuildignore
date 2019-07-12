@@ -10,3 +10,5 @@
 ^appveyor\.yml$
 ^\.travis\.yml$
 ^codecov\.yml$
+^data-raw$
+^README\.html$
