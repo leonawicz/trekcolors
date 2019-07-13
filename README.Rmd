@@ -36,10 +36,13 @@ remotes::install_github("leonawicz/trekcolors")
 
 ## Example
 
-```{r ex}
+```{r ex, fig.width=6, fig.height=8}
 library(trekcolors)
 trekpal("lcars2357")
 
 # See available palette names
 trekpal()
+
+# view all predefined, named, fixed palettes
+view_trekpals()
 ```

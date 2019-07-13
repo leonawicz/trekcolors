@@ -2,9 +2,12 @@
 % Please edit documentation in R/trekcolors.R
 \name{trekpal}
 \alias{trekpal}
+\alias{view_trekpals}
 \title{Named Star Trek color palette}
 \usage{
 trekpal(id)
+
+view_trekpals()
 }
 \arguments{
 \item{id}{character, name of predefined palette. If missing, return all available palette names.}
@@ -15,8 +18,16 @@ character vector of hex colors or palette names
 \description{
 Return a named Star Trek color palette from the \code{trekpals} dataset.
 }
+\details{
+Most of the palettes are qualitative, and not necessarily evenly spaced in terms of hue, saturation or brightness.
+This is because most of the palettes come from logos, symbols, insignia and other simple representations.
+However, several palettes have specifically been constructed as sequential or divergent if it made sense to do so based on the dominant colors present.
+}
 \examples{
 trekpal("lcars2357")
 # leave id blank to list available names:
 trekpal()
+
+# to view all palettes
+view_trekpals()
 }

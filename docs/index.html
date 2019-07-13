@@ -98,32 +98,41 @@
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
 <p>You can install the development version of <code>trekcolors</code> from GitHub with:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># install.packages("remotes")</span>
-remotes<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/remotes/topics/install_github">install_github</a></span>(<span class="st">"leonawicz/trekcolors"</span>)</code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="co"># install.packages("remotes")</span></a>
+<a class="sourceLine" id="cb1-2" title="2">remotes<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/remotes/topics/install_github">install_github</a></span>(<span class="st">"leonawicz/trekcolors"</span>)</a></code></pre></div>
 </div>
 <div id="example" class="section level2">
 <h2 class="hasAnchor">
 <a href="#example" class="anchor"></a>Example</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(trekcolors)
-<span class="kw"><a href="reference/trekpal.html">trekpal</a></span>(<span class="st">"lcars2357"</span>)
-<span class="co">#&gt; [1] "#ffff99" "#ff9933" "#ffcc99" "#ffcc66" "#cc99cc" "#664466" "#99ccff"</span>
-<span class="co">#&gt; [8] "#3366cc" "#006699"</span>
-
-<span class="co"># See available palette names</span>
-<span class="kw"><a href="reference/trekpal.html">trekpal</a></span>()
-<span class="co">#&gt;  [1] "andorian"            "breen"               "cardassian"         </span>
-<span class="co">#&gt;  [4] "cardassian2"         "cardassian3"         "cardassian4"        </span>
-<span class="co">#&gt;  [7] "cardassian5"         "cardassian6"         "cardassian7"        </span>
-<span class="co">#&gt; [10] "cardassian8"         "cardassian9"         "cardassian10"       </span>
-<span class="co">#&gt; [13] "ferengi"             "ferengi2"            "ferengi3"           </span>
-<span class="co">#&gt; [16] "klingon"             "klingon2"            "lcarscolors"        </span>
-<span class="co">#&gt; [19] "lcars2357"           "lcars2369"           "lcars2375"          </span>
-<span class="co">#&gt; [22] "lcars2379"           "lcars_alt"           "lcars_first_contact"</span>
-<span class="co">#&gt; [25] "lcars_nemesis"       "lcars_nx01"          "lcars_29c"          </span>
-<span class="co">#&gt; [28] "lcars_23c"           "lcars_red_alert"     "romulan"            </span>
-<span class="co">#&gt; [31] "romulan2"            "starfleet"           "ufp"                </span>
-<span class="co">#&gt; [34] "red_alert"           "yellow_alert"        "blue_alert"         </span>
-<span class="co">#&gt; [37] "no_alert"            "black_alert"</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(trekcolors)</a>
+<a class="sourceLine" id="cb2-2" title="2"><span class="kw"><a href="reference/trekpal.html">trekpal</a></span>(<span class="st">"lcars2357"</span>)</a>
+<a class="sourceLine" id="cb2-3" title="3"><span class="co">#&gt; [1] "#ffff99" "#ff9933" "#ffcc99" "#ffcc66" "#cc99cc" "#664466" "#99ccff"</span></a>
+<a class="sourceLine" id="cb2-4" title="4"><span class="co">#&gt; [8] "#3366cc" "#006699"</span></a>
+<a class="sourceLine" id="cb2-5" title="5"></a>
+<a class="sourceLine" id="cb2-6" title="6"><span class="co"># See available palette names</span></a>
+<a class="sourceLine" id="cb2-7" title="7"><span class="kw"><a href="reference/trekpal.html">trekpal</a></span>()</a>
+<a class="sourceLine" id="cb2-8" title="8"><span class="co">#&gt;  [1] "andorian"            "andorian2"           "bajoran"            </span></a>
+<a class="sourceLine" id="cb2-9" title="9"><span class="co">#&gt;  [4] "bajoran2"            "borg"                "borg2"              </span></a>
+<a class="sourceLine" id="cb2-10" title="10"><span class="co">#&gt;  [7] "breen"               "breen2"              "cardassian"         </span></a>
+<a class="sourceLine" id="cb2-11" title="11"><span class="co">#&gt; [10] "cardassian2"         "cardassian3"         "cardassian4"        </span></a>
+<a class="sourceLine" id="cb2-12" title="12"><span class="co">#&gt; [13] "cardassian5"         "cardassian6"         "cardassian7"        </span></a>
+<a class="sourceLine" id="cb2-13" title="13"><span class="co">#&gt; [16] "cardassian8"         "cardassian9"         "cardassian10"       </span></a>
+<a class="sourceLine" id="cb2-14" title="14"><span class="co">#&gt; [19] "dominion"            "enara"               "enara2"             </span></a>
+<a class="sourceLine" id="cb2-15" title="15"><span class="co">#&gt; [22] "ferengi"             "ferengi2"            "ferengi3"           </span></a>
+<a class="sourceLine" id="cb2-16" title="16"><span class="co">#&gt; [25] "gorn"                "iconian"             "kc_alliance"        </span></a>
+<a class="sourceLine" id="cb2-17" title="17"><span class="co">#&gt; [28] "klingon"             "klingon2"            "lcarscolors"        </span></a>
+<a class="sourceLine" id="cb2-18" title="18"><span class="co">#&gt; [31] "lcars2357"           "lcars2369"           "lcars2375"          </span></a>
+<a class="sourceLine" id="cb2-19" title="19"><span class="co">#&gt; [34] "lcars2379"           "lcars_alt"           "lcars_first_contact"</span></a>
+<a class="sourceLine" id="cb2-20" title="20"><span class="co">#&gt; [37] "lcars_nemesis"       "lcars_nx01"          "lcars_29c"          </span></a>
+<a class="sourceLine" id="cb2-21" title="21"><span class="co">#&gt; [40] "lcars_23c"           "lcars_red_alert"     "romulan"            </span></a>
+<a class="sourceLine" id="cb2-22" title="22"><span class="co">#&gt; [43] "romulan2"            "starfleet"           "talaria"            </span></a>
+<a class="sourceLine" id="cb2-23" title="23"><span class="co">#&gt; [46] "tholian"             "terran_empire"       "ufp"                </span></a>
+<a class="sourceLine" id="cb2-24" title="24"><span class="co">#&gt; [49] "red_alert"           "yellow_alert"        "blue_alert"         </span></a>
+<a class="sourceLine" id="cb2-25" title="25"><span class="co">#&gt; [52] "no_alert"            "black_alert"</span></a>
+<a class="sourceLine" id="cb2-26" title="26"></a>
+<a class="sourceLine" id="cb2-27" title="27"><span class="co"># view all predefined, named, fixed palettes</span></a>
+<a class="sourceLine" id="cb2-28" title="28"><span class="kw"><a href="reference/trekpal.html">view_trekpals</a></span>()</a></code></pre></div>
+<p><img src="reference/figures/README-ex-1.png" width="100%"></p>
 </div>
 </div>
   </div>
