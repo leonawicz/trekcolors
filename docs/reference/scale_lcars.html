@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • trekcolors</title>
+<title>Color and fill scale functions for LCARS colors — scale_lcars • trekcolors</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -39,7 +39,9 @@
 
   <link href="../extra.css" rel="stylesheet">
   
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="Color and fill scale functions for LCARS colors — scale_lcars" />
+
+<meta property="og:description" content="Scale functions used with ggplot2." />
 
 <meta property="og:image" content="http://leonawicz.github.io/trekcolors/logo.png" />
 <meta name="twitter:card" content="summary" />
@@ -69,7 +71,7 @@
   </head>
 
   <body>
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
@@ -120,81 +122,88 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>Color and fill scale functions for LCARS colors</h1>
+    <small class="dont-index">Source: <a href='https://github.com/leonawicz/trekcolors/blob/master/R/lcars.R'><code>R/lcars.R</code></a></small>
+    <div class="hidden name"><code>scale_lcars.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    
+    <p>Scale functions used with ggplot2.</p>
+    
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
+    <pre class="usage"><span class='fu'>scale_color_lcars</span>(<span class='kw'>palette</span> <span class='kw'>=</span> <span class='st'>"2357"</span>, <span class='kw'>discrete</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>reverse</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='no'>...</span>)
 
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-datasets" class="hasAnchor"><a href="#section-datasets" class="anchor"></a>Datasets</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      <tr>
-        
-        <td>
-          <p><code><a href="trekpals.html">trekpals</a></code> </p>
-        </td>
-        <td><p>Star Trek color palettes.</p></td>
-      </tr>
-    </tbody><tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-functions" class="hasAnchor"><a href="#section-functions" class="anchor"></a>Functions</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      <tr>
-        
-        <td>
-          <p><code><a href="trek_pal.html">trek_pal()</a></code> <code><a href="trek_pal.html">view_trek_pals()</a></code> </p>
-        </td>
-        <td><p>Star Trek color palettes</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="scale_trek.html">scale_color_trek()</a></code> <code><a href="scale_trek.html">scale_fill_trek()</a></code> </p>
-        </td>
-        <td><p>Color and fill scale functions for Star Trek palettes</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="lcars_pals.html">lcars_pals()</a></code> <code><a href="lcars_pals.html">lcars_pal()</a></code> <code><a href="lcars_pals.html">lcars_colors_pal()</a></code> </p>
-        </td>
-        <td><p>Palettes and palette generating functions based on LCARS colors</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="lcars_colors.html">lcars_colors()</a></code> <code><a href="lcars_colors.html">lcars_2357()</a></code> <code><a href="lcars_colors.html">lcars_2369()</a></code> <code><a href="lcars_colors.html">lcars_2375()</a></code> <code><a href="lcars_colors.html">lcars_2379()</a></code> </p>
-        </td>
-        <td><p>Hex colors from LCARS color names</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="scale_lcars.html">scale_color_lcars()</a></code> <code><a href="scale_lcars.html">scale_color_lcars1()</a></code> <code><a href="scale_lcars.html">scale_color_lcars2()</a></code> <code><a href="scale_lcars.html">scale_fill_lcars()</a></code> <code><a href="scale_lcars.html">scale_fill_lcars1()</a></code> <code><a href="scale_lcars.html">scale_fill_lcars2()</a></code> </p>
-        </td>
-        <td><p>Color and fill scale functions for LCARS colors</p></td>
-      </tr>
-    </tbody>
+<span class='fu'>scale_color_lcars1</span>(<span class='kw'>color</span> <span class='kw'>=</span> <span class='st'>"atomic-tangerine"</span>, <span class='kw'>discrete</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>,
+  <span class='kw'>reverse</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>dark</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='no'>...</span>)
+
+<span class='fu'>scale_color_lcars2</span>(<span class='kw'>low</span> <span class='kw'>=</span> <span class='st'>"atomic-tangerine"</span>, <span class='kw'>high</span> <span class='kw'>=</span> <span class='st'>"near-blue"</span>,
+  <span class='kw'>discrete</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>reverse</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>dark</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>divergent</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='no'>...</span>)
+
+<span class='fu'>scale_fill_lcars</span>(<span class='kw'>palette</span> <span class='kw'>=</span> <span class='st'>"2357"</span>, <span class='kw'>discrete</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>reverse</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='no'>...</span>)
+
+<span class='fu'>scale_fill_lcars1</span>(<span class='kw'>color</span> <span class='kw'>=</span> <span class='st'>"atomic-tangerine"</span>, <span class='kw'>discrete</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>,
+  <span class='kw'>reverse</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>dark</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='no'>...</span>)
+
+<span class='fu'>scale_fill_lcars2</span>(<span class='kw'>low</span> <span class='kw'>=</span> <span class='st'>"atomic-tangerine"</span>, <span class='kw'>high</span> <span class='kw'>=</span> <span class='st'>"near-blue"</span>,
+  <span class='kw'>discrete</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>reverse</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>dark</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>divergent</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='no'>...</span>)</pre>
+    
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>palette</th>
+      <td><p>character, name of palette in <code>lcars_pals</code>.</p></td>
+    </tr>
+    <tr>
+      <th>discrete</th>
+      <td><p>logical, discrete or continuous palette.</p></td>
+    </tr>
+    <tr>
+      <th>reverse</th>
+      <td><p>logical, reverse color order.</p></td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td><p>additional arguments passed to <code><a href='https://ggplot2.tidyverse.org/reference/discrete_scale.html'>ggplot2::discrete_scale</a></code> or <code>ggplot2::scale_*_gradientn</code>, for discrete or continuous palettes, respectively.</p></td>
+    </tr>
+    <tr>
+      <th>color</th>
+      <td><p>character, LCARS color name for sequential palette.</p></td>
+    </tr>
+    <tr>
+      <th>dark</th>
+      <td><p>logical, use black instead of white for the base color in sequential palette or midpoint in divergent palette.</p></td>
+    </tr>
+    <tr>
+      <th>low</th>
+      <td><p>character, LCARS color name.</p></td>
+    </tr>
+    <tr>
+      <th>high</th>
+      <td><p>character, LCARS color name.</p></td>
+    </tr>
+    <tr>
+      <th>divergent</th>
+      <td><p>logical, use a divergent palette instead of two-color sequential palette.</p></td>
+    </tr>
     </table>
-  </div>
+    
 
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#section-datasets">Datasets</a></li>
-      <li><a href="#section-functions">Functions</a></li>
-    </ul>
+      <li><a href="#arguments">Arguments</a></li>
+                </ul>
+
   </div>
 </div>
 

@@ -9,11 +9,14 @@ LazyData: true
 URL: https://github.com/leonawicz/trekcolors
 BugReports: https://github.com/leonawicz/trekcolors/issues
 Depends: R (>= 2.10)
+Imports:
+    ggplot2
 Suggests: 
     testthat,
     knitr,
     rmarkdown,
-    covr
+    covr,
+    spelling
 VignetteBuilder: knitr
 RoxygenNote: 6.1.1
 Language: en-US

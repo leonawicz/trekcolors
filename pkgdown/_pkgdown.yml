@@ -14,7 +14,11 @@ reference:
   - trekpals
 - title: Functions
   contents:
-  - trekpal
+  - trek_pal
+  - scale_trek
+  - lcars_pals
+  - lcars_colors
+  - scale_lcars
 
 navbar:
   type: inverse

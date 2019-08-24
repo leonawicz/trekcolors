@@ -9,6 +9,6 @@
 trekpals
 }
 \description{
-A named list of 53 Star Trek color palettes.
+A named list of 39 Star Trek color palettes.
 }
 \keyword{datasets}

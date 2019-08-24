@@ -1,41 +1,45 @@
 #' Star Trek color palettes.
 #'
-#' A named list of 53 Star Trek color palettes.
+#' A named list of 39 Star Trek color palettes.
 #'
 #' @format A named list.
 "trekpals"
 
-#' Named Star Trek color palette
+#' Star Trek color palettes
 #'
-#' Return a named Star Trek color palette from the \code{trekpals} dataset.
+#' Return a predefined Star Trek color palette from the \code{trekpals} dataset.
 #'
 #' Most of the palettes are qualitative, and not necessarily evenly spaced in terms of hue, saturation or brightness.
 #' This is because most of the palettes come from logos, symbols, insignia and other simple representations.
 #' However, several palettes have specifically been constructed as sequential or divergent if it made sense to do so based on the dominant colors present.
+#' Additional special functions exist for the subset of LCARS palettes.
 #'
-#' @param id character, name of predefined palette. If missing, return all available palette names.
+#' @param palette character, name of predefined palette. If missing, return all available palette names.
+#' @param reverse logical, reverse color order.
 #'
 #' @return character vector of hex colors or palette names
 #' @export
+#' @seealso \code{\link{lcars_pals}}, \code{\link{scale_lcars}}
 #'
 #' @examples
-#' trekpal("lcars2357")
-#' # leave id blank to list available names:
-#' trekpal()
+#' trek_pal("lcars_2357")
+#' # leave palette blank to list available names:
+#' trek_pal()
 #'
 #' # to view all palettes
-#' view_trekpals()
-trekpal <- function(id){
-  if(missing(id)) return(names(trekcolors::trekpals))
-  if(!id %in% names(trekcolors::trekpals))
-    stop("`id` is not a predefined palette name.", call. = FALSE)
-  trekcolors::trekpals[[id]]
+#' view_trek_pals()
+trek_pal <- function(palette = "starfleet", reverse = FALSE){
+  if(missing(palette)) return(names(trekcolors::trekpals))
+  if(!palette %in% names(trekcolors::trekpals))
+    stop("Invalid palette name.", call. = FALSE)
+  pal <- trekcolors::trekpals[[palette]]
+  if(reverse) rev(pal) else pal
 }
 
 #' @export
-#' @rdname trekpal
-view_trekpals <- function(){
-  pals <- trekcolors::trekpals
+#' @rdname trek_pal
+view_trek_pals <- function(palette){
+  pals <- if(missing(palette)) trekcolors::trekpals else trekcolors::trekpals[palette]
   lab <- names(pals)
   n <- length(pals)
   nc <- unlist(lapply(pals, length))
@@ -56,4 +60,38 @@ view_trekpals <- function(){
     cex = 0.6, xpd = TRUE, adj = 1)
   graphics::title("Star Trek palettes")
   invisible()
+}
+
+#' Color and fill scale functions for Star Trek palettes
+#'
+#' Scale functions used with ggplot2.
+#'
+#' Most palettes should be used as qualitative palettes. See \code{trekpals} to see how many colors are in each predefined palette.
+#' Use \code{view_trek_pals()} to plot all palettes to see which may work best for your purposes.
+#'
+#' @param palette character, name of Star Trek palette. See \code{trek_pal()} for list of palette names.
+#' @param discrete logical, discrete or continuous palette.
+#' @param reverse logical, reverse color order.
+#' @param ... additional arguments passed to \code{ggplot2::discrete_scale} or \code{ggplot2::scale_*_gradientn}, for discrete or continuous palettes, respectively.
+#'
+#' @export
+#' @name scale_trek
+scale_color_trek <- function(palette = "starfleet", discrete = TRUE, reverse = FALSE, ...){
+  pal <- grDevices::colorRampPalette(trek_pal(palette, reverse))
+  if(discrete){
+    ggplot2::discrete_scale("colour", palette, palette = pal, ...)
+  } else {
+    ggplot2::scale_color_gradientn(colours = pal(256), ...)
+  }
+}
+
+#' @export
+#' @rdname scale_trek
+scale_fill_trek <- function(palette = "starfleet", discrete = TRUE, reverse = FALSE, ...){
+  pal <- grDevices::colorRampPalette(trek_pal(palette, reverse))
+  if(discrete){
+    ggplot2::discrete_scale("fill", palette, palette = pal, ...)
+  } else {
+    ggplot2::scale_fill_gradientn(colours = pal(256), ...)
+  }
 }

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Named Star Trek color palette — trekpal • trekcolors</title>
+<title>Color and fill scale functions for Star Trek palettes — scale_trek • trekcolors</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -39,9 +39,9 @@
 
   <link href="../extra.css" rel="stylesheet">
   
-<meta property="og:title" content="Named Star Trek color palette — trekpal" />
+<meta property="og:title" content="Color and fill scale functions for Star Trek palettes — scale_trek" />
 
-<meta property="og:description" content="Return a named Star Trek color palette from the trekpals dataset." />
+<meta property="og:description" content="Scale functions used with ggplot2." />
 
 <meta property="og:image" content="http://leonawicz.github.io/trekcolors/logo.png" />
 <meta name="twitter:card" content="summary" />
@@ -124,76 +124,58 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Named Star Trek color palette</h1>
+    <h1>Color and fill scale functions for Star Trek palettes</h1>
     <small class="dont-index">Source: <a href='https://github.com/leonawicz/trekcolors/blob/master/R/trekcolors.R'><code>R/trekcolors.R</code></a></small>
-    <div class="hidden name"><code>trekpal.Rd</code></div>
+    <div class="hidden name"><code>scale_trek.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Return a named Star Trek color palette from the <code>trekpals</code> dataset.</p>
+    <p>Scale functions used with ggplot2.</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>trekpal</span>(<span class='no'>id</span>)
+    <pre class="usage"><span class='fu'>scale_color_trek</span>(<span class='kw'>palette</span> <span class='kw'>=</span> <span class='st'>"starfleet"</span>, <span class='kw'>discrete</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>,
+  <span class='kw'>reverse</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='no'>...</span>)
 
-<span class='fu'>view_trekpals</span>()</pre>
+<span class='fu'>scale_fill_trek</span>(<span class='kw'>palette</span> <span class='kw'>=</span> <span class='st'>"starfleet"</span>, <span class='kw'>discrete</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>,
+  <span class='kw'>reverse</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='no'>...</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>id</th>
-      <td><p>character, name of predefined palette. If missing, return all available palette names.</p></td>
+      <th>palette</th>
+      <td><p>character, name of Star Trek palette. See <code><a href='trek_pal.html'>trek_pal()</a></code> for list of palette names.</p></td>
+    </tr>
+    <tr>
+      <th>discrete</th>
+      <td><p>logical, discrete or continuous palette.</p></td>
+    </tr>
+    <tr>
+      <th>reverse</th>
+      <td><p>logical, reverse color order.</p></td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td><p>additional arguments passed to <code><a href='https://ggplot2.tidyverse.org/reference/discrete_scale.html'>ggplot2::discrete_scale</a></code> or <code>ggplot2::scale_*_gradientn</code>, for discrete or continuous palettes, respectively.</p></td>
     </tr>
     </table>
     
-    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
-
-    <p>character vector of hex colors or palette names</p>
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>Most of the palettes are qualitative, and not necessarily evenly spaced in terms of hue, saturation or brightness.
-This is because most of the palettes come from logos, symbols, insignia and other simple representations.
-However, several palettes have specifically been constructed as sequential or divergent if it made sense to do so based on the dominant colors present.</p>
+    <p>Most palettes should be used as qualitative palettes. See <code>trekpals</code> to see how many colors are in each predefined palette.
+Use <code><a href='trek_pal.html'>view_trek_pals()</a></code> to plot all palettes to see which may work best for your purposes.</p>
     
 
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>trekpal</span>(<span class='st'>"lcars2357"</span>)</div><div class='output co'>#&gt; [1] "#ffff99" "#ff9933" "#ffcc99" "#ffcc66" "#cc99cc" "#664466" "#99ccff"
-#&gt; [8] "#3366cc" "#006699"</div><div class='input'><span class='co'># leave id blank to list available names:</span>
-<span class='fu'>trekpal</span>()</div><div class='output co'>#&gt;  [1] "andorian"            "andorian2"           "bajoran"            
-#&gt;  [4] "bajoran2"            "borg"                "borg2"              
-#&gt;  [7] "breen"               "breen2"              "cardassian"         
-#&gt; [10] "cardassian2"         "cardassian3"         "cardassian4"        
-#&gt; [13] "cardassian5"         "cardassian6"         "cardassian7"        
-#&gt; [16] "cardassian8"         "cardassian9"         "cardassian10"       
-#&gt; [19] "dominion"            "enara"               "enara2"             
-#&gt; [22] "ferengi"             "ferengi2"            "ferengi3"           
-#&gt; [25] "gorn"                "iconian"             "kc_alliance"        
-#&gt; [28] "klingon"             "klingon2"            "lcarscolors"        
-#&gt; [31] "lcars2357"           "lcars2369"           "lcars2375"          
-#&gt; [34] "lcars2379"           "lcars_alt"           "lcars_first_contact"
-#&gt; [37] "lcars_nemesis"       "lcars_nx01"          "lcars_29c"          
-#&gt; [40] "lcars_23c"           "lcars_red_alert"     "romulan"            
-#&gt; [43] "romulan2"            "starfleet"           "talaria"            
-#&gt; [46] "tholian"             "terran_empire"       "ufp"                
-#&gt; [49] "red_alert"           "yellow_alert"        "blue_alert"         
-#&gt; [52] "no_alert"            "black_alert"        </div><div class='input'>
-<span class='co'># to view all palettes</span>
-<span class='fu'>view_trekpals</span>()</div><div class='img'><img src='trekpal-1.png' alt='' width='700' height='433' /></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
       
-      <li><a href="#value">Value</a></li>
-
       <li><a href="#details">Details</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
+          </ul>
 
   </div>
 </div>

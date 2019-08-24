@@ -34,15 +34,77 @@ You can install the development version of `trekcolors` from GitHub with:
 remotes::install_github("leonawicz/trekcolors")
 ```
 
-## Example
+## Basic examples
 
-```{r ex, fig.width=6, fig.height=8}
+```{r ex1}
 library(trekcolors)
-trekpal("lcars2357")
+library(ggplot2)
 
+trek_pal("starfleet")
+
+trek_pal("lcars_2357")
+lcars_pal("2357") # there are some special functions for LCARS colors
+```
+
+Preview the `starfleet` and `lcars_2357` palettes.
+
+```{r ex2}
+view_trek_pals(c("starfleet", "lcars_2357"))
+```
+
+Use these in a couple example plots.
+
+```{r ex3}
+p <- ggplot(iris, aes(Sepal.Width, Sepal.Length, color = Species)) + 
+  geom_point(size = 2)
+p + scale_color_trek() # starfleet is default palette
+
+p <- ggplot(diamonds, aes(carat, price, color = clarity)) + 
+  geom_point()
+p + scale_color_lcars("2357") # equivalent to scale_color_trek("lcars_2357")
+```
+
+## Palettes with named colors
+
+The four LCARS palettes that have a year in their series name are special in that these official standard LCARS colors have formal names.
+
+```{r ex4}
+# lcars_pals() # print list of LCARS palettes
+
+lcars_colors() # full set of unique names across the four palettes
+
+lcars_2357() # specific color series; also 2369, 2375, 2379
+
+lcars_2357("lilac", "mariner") # select by name
+```
+
+## Custom palettes
+
+In addition to these and all the other predefined palettes, custom palettes can be constructed using official LCARS color names. This is like `colorRampPalette` but with the ability to recognize official LCARS color names. This functionality is also leveraged by functions like `scale_color_lcars1` and `scale_color_lcars2` when making sequential and divergent palettes based on specific LCARS colors for use with ggplot.
+
+```{r ex5}
+lcars_canary_egg <- lcars_colors_pal(c("pale-canary", "eggplant"))
+lcars_canary_egg(8)
+
+p <- ggplot(diamonds, aes(clarity, fill = clarity)) + geom_bar()
+p + scale_fill_lcars2("pale-canary", "eggplant")
+# p + scale_fill_manual(values = lcars_canary_egg(8)) # equivalent
+```
+
+## All predefined palettes
+
+```{r ex6, fig.width=6, fig.height=8}
 # See available palette names
-trekpal()
+trek_pal()
 
-# view all predefined, named, fixed palettes
-view_trekpals()
+# view all predefined palettes
+view_trek_pals()
+```
+
+```{r is_md, echo = FALSE}
+is_md <- knitr::opts_knit$get("rmarkdown.pandoc.to") == "markdown_github-ascii_identifiers"
+```
+
+```{r md_pkg_ref, echo = FALSE, results = "asis", eval = is_md}
+cat('## Reference\n\n[Complete package reference and function documentation](https://leonawicz.github.io/trekcolors/)')
 ```
