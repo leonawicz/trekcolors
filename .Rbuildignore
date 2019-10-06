@@ -12,3 +12,4 @@
 ^codecov\.yml$
 ^data-raw$
 ^README\.html$
+^codemeta\.json$
