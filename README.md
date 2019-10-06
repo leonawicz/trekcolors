@@ -129,7 +129,7 @@ p + scale_fill_lcars2("pale-canary", "danub")
 
 ``` r
 
-d <- diamonds[diamonds$cut >= "Very Good",]
+d <- diamonds[diamonds$cut >= "Very Good", ]
 p <- ggplot(d, aes(carat, stat(count), fill = cut)) +
   geom_density(position = "fill")
 p + scale_fill_trek("starfleet")
@@ -243,5 +243,5 @@ view_trek_pals()
 -----
 
 Please note that this project is released with a [Contributor Code of
-Conduct](https://leonawicz.github.io/trekcolors/CODE_OF_CONDUCT.html).
+Conduct](https://github.com/leonawicz/trekcolors/blob/master/CODE_OF_CONDUCT.md).
 By participating in this project you agree to abide by its terms.
