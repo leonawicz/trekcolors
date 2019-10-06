@@ -1,5 +1,8 @@
 {
-  "@context": ["https://doi.org/10.5063/schema/codemeta-2.0", "http://schema.org"],
+  "@context": [
+    "https://doi.org/10.5063/schema/codemeta-2.0",
+    "http://schema.org"
+  ],
   "@type": "SoftwareSourceCode",
   "identifier": "trekcolors",
   "description": "Provides a dataset of predefined color palettes based on the Star Trek science fiction series, associated color palette functions, \n    and additional functions for generating customized palettes that are on theme. The package also offers functions for applying \n    the palettes to plots made using the 'ggplot2' package.",
@@ -120,8 +123,17 @@
   ],
   "releaseNotes": "https://github.com/leonawicz/trekcolors/blob/master/NEWS.md",
   "readme": "https://github.com/leonawicz/trekcolors/blob/master/README.md",
-  "fileSize": "870.203KB",
-  "contIntegration": ["https://travis-ci.org/leonawicz/trekcolors", "https://ci.appveyor.com/project/leonawicz/trekcolors", "https://codecov.io/gh/leonawicz/trekcolors?branch=master"],
+  "fileSize": "870.207KB",
+  "contIntegration": [
+    "https://travis-ci.org/leonawicz/trekcolors",
+    "https://ci.appveyor.com/project/leonawicz/trekcolors",
+    "https://codecov.io/gh/leonawicz/trekcolors?branch=master"
+  ],
   "developmentStatus": "http://www.repostatus.org/#active",
-  "keywords": ["r-package", "star-trek", "color-palettes", "lcars"]
+  "keywords": [
+    "r-package",
+    "star-trek",
+    "color-palettes",
+    "lcars"
+  ]
 }
