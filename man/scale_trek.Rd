@@ -28,3 +28,10 @@ Scale functions used with ggplot2.
 Most palettes should be used as qualitative palettes. See \code{trekpals} to see how many colors are in each predefined palette.
 Use \code{view_trek_pals()} to plot all palettes to see which may work best for your purposes.
 }
+\examples{
+library(ggplot2)
+d <- diamonds[diamonds$cut >= "Very Good", ]
+ggplot(d, aes(carat, stat(count), fill = cut)) +
+  geom_density(position = "fill") +
+  scale_fill_trek("starfleet")
+}

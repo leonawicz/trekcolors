@@ -15,6 +15,8 @@
 #'
 #' @examples
 #' lcars_colors()
+#' lcars_2357()
+#' lcars_colors("rust", "danub")
 lcars_colors <- function(...){
   x <- c(...)
   if(is.null(x)) .lcarscolors else .lcarscolors[x]
@@ -123,6 +125,14 @@ lcars_colors_pal <- function(palette, reverse = FALSE, ...){
 #'
 #' @export
 #' @name scale_lcars
+#'
+#' @examples
+#' library(ggplot2)
+#' p <- ggplot(diamonds, aes(carat, stat(count), fill = cut)) +
+#'   geom_density(position = "fill")
+#' p + scale_fill_lcars("2357")
+#' p + scale_fill_lcars1("atomic-tangerine", dark = TRUE)
+#' p + scale_fill_lcars2("pale-canary", "danub")
 scale_color_lcars <- function(palette = "2357", discrete = TRUE, reverse = FALSE, ...){
   pal <- grDevices::colorRampPalette(lcars_pal(palette, reverse))
   if(discrete){

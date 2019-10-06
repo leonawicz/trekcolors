@@ -1,6 +1,6 @@
 #' Star Trek color palettes.
 #'
-#' A named list of 39 Star Trek color palettes.
+#' A named list of 35 Star Trek color palettes.
 #'
 #' @format A named list.
 "trekpals"
@@ -28,7 +28,7 @@
 #'
 #' # to view all palettes
 #' view_trek_pals()
-trek_pal <- function(palette = "starfleet", reverse = FALSE){
+trek_pal <- function(palette, reverse = FALSE){
   if(missing(palette)) return(names(trekcolors::trekpals))
   if(!palette %in% names(trekcolors::trekpals))
     stop("Invalid palette name.", call. = FALSE)
@@ -76,6 +76,13 @@ view_trek_pals <- function(palette){
 #'
 #' @export
 #' @name scale_trek
+#'
+#' @examples
+#' library(ggplot2)
+#' d <- diamonds[diamonds$cut >= "Very Good", ]
+#' ggplot(d, aes(carat, stat(count), fill = cut)) +
+#'   geom_density(position = "fill") +
+#'   scale_fill_trek("starfleet")
 scale_color_trek <- function(palette = "starfleet", discrete = TRUE, reverse = FALSE, ...){
   pal <- grDevices::colorRampPalette(trek_pal(palette, reverse))
   if(discrete){

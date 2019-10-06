@@ -6,7 +6,9 @@ output: github_document
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
-  collapse = TRUE, comment = "#>", fig.path = "man/figures/README-", out.width = "100%", message = FALSE, warning = FALSE, error = FALSE
+  collapse = TRUE, comment = "#>", fig.path = "man/figures/README-", 
+  fig.height = 3, out.width = "100%", dpi = 150, message = FALSE, 
+  warning = FALSE, error = FALSE, dev.args = list(type = "cairo")
 )
 ```
 
@@ -16,14 +18,16 @@ knitr::opts_chunk$set(
 <br/>
 **License:** [MIT](https://opensource.org/licenses/MIT)<br/>
 
-[![CRAN status](http://www.r-pkg.org/badges/version/trekcolors)](https://cran.r-project.org/package=trekcolors)
-[![CRAN downloads](http://cranlogs.r-pkg.org/badges/grand-total/trekcolors)](https://cran.r-project.org/package=trekcolors) 
-[![Rdoc](http://www.rdocumentation.org/badges/version/trekcolors)](http://www.rdocumentation.org/packages/trekcolors)
+[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 [![Travis build status](https://travis-ci.org/leonawicz/trekcolors.svg?branch=master)](https://travis-ci.org/leonawicz/trekcolors)
 [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/leonawicz/trekcolors?branch=master&svg=true)](https://ci.appveyor.com/project/leonawicz/trekcolors)
 [![Codecov test coverage](https://codecov.io/gh/leonawicz/trekcolors/branch/master/graph/badge.svg)](https://codecov.io/gh/leonawicz/trekcolors?branch=master)
 
-The `trekcolors` package provides a collection of color palettes based on Star Trek.
+[![CRAN status](http://www.r-pkg.org/badges/version/trekcolors)](https://cran.r-project.org/package=trekcolors)
+[![CRAN downloads](http://cranlogs.r-pkg.org/badges/grand-total/trekcolors)](https://cran.r-project.org/package=trekcolors) 
+[![Github Stars](https://img.shields.io/github/stars/leonawicz/trekcolors.svg?style=social&label=Github)](https://github.com/leonawicz/trekcolors)
+
+The `trekcolors` package provides a collection of color palettes based on Star Trek. It also offers functions for custom palettes and `scale_*` functions for use with `ggplot2`.
 
 ## Installation
 
@@ -34,7 +38,9 @@ You can install the development version of `trekcolors` from GitHub with:
 remotes::install_github("leonawicz/trekcolors")
 ```
 
-## Basic examples
+## Examples
+
+### Basics
 
 ```{r ex1}
 library(trekcolors)
@@ -52,24 +58,41 @@ Preview the `starfleet` and `lcars_2357` palettes.
 view_trek_pals(c("starfleet", "lcars_2357"))
 ```
 
-Use these in a couple example plots.
+### Scale functions for use with ggplot2
 
 ```{r ex3}
 p <- ggplot(iris, aes(Sepal.Width, Sepal.Length, color = Species)) + 
-  geom_point(size = 2)
+  geom_point(size = 5, alpha = 0.75)
 p + scale_color_trek() # starfleet is default palette
 
 p <- ggplot(diamonds, aes(carat, price, color = clarity)) + 
   geom_point()
 p + scale_color_lcars("2357") # equivalent to scale_color_trek("lcars_2357")
+
+p <- ggplot(diamonds, aes(carat, stat(count), fill = cut)) +
+  geom_density(position = "fill")
+p + scale_fill_trek("klingon")
+p + scale_fill_trek("romulan")
+p + scale_fill_trek("andorian")
+
+p <- ggplot(diamonds, aes(carat, stat(count), fill = cut)) +
+  geom_density(position = "fill")
+p + scale_fill_lcars("2357")
+p + scale_fill_lcars1("atomic-tangerine", dark = TRUE)
+p + scale_fill_lcars2("pale-canary", "danub")
+
+d <- diamonds[diamonds$cut >= "Very Good", ]
+p <- ggplot(d, aes(carat, stat(count), fill = cut)) +
+  geom_density(position = "fill")
+p + scale_fill_trek("starfleet")
 ```
 
-## Palettes with named colors
+### Palettes with named colors
 
 The four LCARS palettes that have a year in their series name are special in that these official standard LCARS colors have formal names.
 
 ```{r ex4}
-# lcars_pals() # print list of LCARS palettes
+# lcars_pals() # print list of all LCARS palettes
 
 lcars_colors() # full set of unique names across the four palettes
 
@@ -78,20 +101,25 @@ lcars_2357() # specific color series; also 2369, 2375, 2379
 lcars_2357("lilac", "mariner") # select by name
 ```
 
-## Custom palettes
+### Custom palettes
 
-In addition to these and all the other predefined palettes, custom palettes can be constructed using official LCARS color names. This is like `colorRampPalette` but with the ability to recognize official LCARS color names. This functionality is also leveraged by functions like `scale_color_lcars1` and `scale_color_lcars2` when making sequential and divergent palettes based on specific LCARS colors for use with ggplot.
+In addition to these and all the other predefined palettes, custom palettes can be constructed using official LCARS color names. This is like `colorRampPalette` but with the ability to recognize official LCARS color names. This functionality was leveraged by `scale_color_lcars1` and `scale_color_lcars2` seen above when making sequential or divergent palettes based on specific LCARS colors for use with ggplot.
 
 ```{r ex5}
-lcars_canary_egg <- lcars_colors_pal(c("pale-canary", "eggplant"))
-lcars_canary_egg(8)
+lcars_custom_pal <- lcars_colors_pal(c("pale-canary", "eggplant"))
+lcars_custom_pal(8)
 
-p <- ggplot(diamonds, aes(clarity, fill = clarity)) + geom_bar()
-p + scale_fill_lcars2("pale-canary", "eggplant")
-# p + scale_fill_manual(values = lcars_canary_egg(8)) # equivalent
+p <- ggplot(diamonds, aes(carat, stat(count), fill = cut)) +
+  geom_density(position = "fill")
+p + scale_fill_lcars2("pale-canary", "danub")
+
+# p + scale_fill_manual(values = lcars_custom_pal(8)) # equivalent
+
+p + scale_fill_lcars2("pale-canary", "danub", divergent = TRUE)
+p + scale_fill_lcars2("pale-canary", "danub", dark = TRUE, divergent = TRUE)
 ```
 
-## All predefined palettes
+### All predefined palettes
 
 ```{r ex6, fig.width=6, fig.height=8}
 # See available palette names
@@ -101,10 +129,11 @@ trek_pal()
 view_trek_pals()
 ```
 
-```{r is_md, echo = FALSE}
-is_md <- knitr::opts_knit$get("rmarkdown.pandoc.to") == "markdown_github-ascii_identifiers"
-```
+## Related packages
 
-```{r md_pkg_ref, echo = FALSE, results = "asis", eval = is_md}
-cat('## Reference\n\n[Complete package reference and function documentation](https://leonawicz.github.io/trekcolors/)')
-```
+* [rtrek](https://github.com/leonawicz/rtrek)
+* [trekfont](https://github.com/leonawicz/trekfont)
+
+---
+
+Please note that this project is released with a [Contributor Code of Conduct](https://leonawicz.github.io/trekcolors/CODE_OF_CONDUCT.html). By participating in this project you agree to abide by its terms.

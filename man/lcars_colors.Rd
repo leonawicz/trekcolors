@@ -32,6 +32,8 @@ You can see all LCARS palettes with \code{\link{lcars_pals}}.
 }
 \examples{
 lcars_colors()
+lcars_2357()
+lcars_colors("rust", "danub")
 }
 \seealso{
 \code{\link{lcars_pals}}

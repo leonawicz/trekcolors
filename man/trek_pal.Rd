@@ -5,7 +5,7 @@
 \alias{view_trek_pals}
 \title{Star Trek color palettes}
 \usage{
-trek_pal(palette = "starfleet", reverse = FALSE)
+trek_pal(palette, reverse = FALSE)
 
 view_trek_pals(palette)
 }

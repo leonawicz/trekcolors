@@ -2,7 +2,9 @@ Package: trekcolors
 Title: Star Trek Color Palettes
 Version: 0.1.0
 Authors@R: person("Matthew", "Leonawicz", email = "matt_leonawicz@esource.com", role = c("aut", "cre"), comment = c(ORCID = "0000-0001-9452-2771"))
-Description: Provides a dataset containing various color palettes based on Star Trek. 
+Description: Provides a dataset of predefined color palettes based on the Star Trek science fiction series, associated color palette functions, 
+    and additional functions for generating customized palettes that are on theme. The package also offers functions for applying 
+    the palettes to plots made using the 'ggplot2' package.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

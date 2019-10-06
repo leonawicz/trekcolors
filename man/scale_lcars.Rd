@@ -52,3 +52,11 @@ scale_fill_lcars2(low = "atomic-tangerine", high = "near-blue",
 \description{
 Scale functions used with ggplot2.
 }
+\examples{
+library(ggplot2)
+p <- ggplot(diamonds, aes(carat, stat(count), fill = cut)) +
+  geom_density(position = "fill")
+p + scale_fill_lcars("2357")
+p + scale_fill_lcars1("atomic-tangerine", dark = TRUE)
+p + scale_fill_lcars2("pale-canary", "danub")
+}
