@@ -29,7 +29,7 @@ lcars2379 <- data.frame(
 trekpals <- list(
   andorian = colorRampPalette(c("#202020", "#446D99", "#83BDD7", "#E4E4E4"))(9),
   bajoran = c("#C00000", "#7A6424", "#323C34", "#4838A8", "#E6D56E", "#A8B5A9"),
-  borg = c("#253741", "#5C849B", "#9EB3BA", "#E8D159", "#A68528", "#604E20"),
+  borg = colorRampPalette(c("#1A1A1A", "#DDDDDD"))(9),
   breen = c("#56483D", "#332822", "#DFCDB9", "#996601", "#8BC95A", "#6C696F", "#F1E899", "#EE711E"),
   breen2 = colorRampPalette(c("#7E0500", "#CE1800", "#EF6F00", "#F7BD00", "#E4E4E4"))(9),
   dominion = c("#313131", "#255268", "#620062", "#63A542", "#A5C6D6", "#B5D6A5", "#B900B9"),

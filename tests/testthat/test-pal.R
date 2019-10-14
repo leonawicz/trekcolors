@@ -12,8 +12,12 @@ test_that("trek_pal returns as expected", {
 })
 
 test_that("view_trek_pals returns as expected", {
-  expect_is(view_trek_pals(), "NULL")
+  file <- file.path(tempdir(), "test-plot.png")
+  png(file)
+  expect_is(p <- view_trek_pals(), "NULL")
   expect_is(view_trek_pals(c("starfleet", "starfleet2")), "NULL")
+  dev.off()
+  unlink(file, recursive = TRUE, force = TRUE)
 })
 
 test_that("trek scale functions return as expected", {
@@ -94,7 +98,4 @@ test_that("lcars scale functions return as expected", {
   expect_is(p + scale_color_lcars("2357", discrete = FALSE), "ggplot")
   expect_is(p + scale_color_lcars1("tanoi", discrete = FALSE), "ggplot")
   expect_is(p + scale_color_lcars2("tanoi", "rust", discrete = FALSE), "ggplot")
-
-  dev.off()
-  unlink("Rplots.pdf", recursive = TRUE, force = TRUE)
 })

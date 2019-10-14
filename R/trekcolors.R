@@ -9,8 +9,8 @@
 #'
 #' Return a predefined Star Trek color palette from the \code{trekpals} dataset.
 #'
-#' Most of the palettes are qualitative, and not necessarily evenly spaced in terms of hue, saturation or brightness.
-#' This is because most of the palettes come from logos, symbols, insignia and other simple representations.
+#' Many of the palettes are qualitative, and not necessarily evenly spaced in terms of hue, saturation or brightness.
+#' This is because many palettes come from logos, symbols, insignia and other simple representations.
 #' However, several palettes have specifically been constructed as sequential or divergent if it made sense to do so based on the dominant colors present.
 #' Additional special functions exist for the subset of LCARS palettes.
 #'
