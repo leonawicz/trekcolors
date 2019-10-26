@@ -111,7 +111,7 @@
   ],
   "releaseNotes": "https://github.com/leonawicz/trekcolors/blob/master/NEWS.md",
   "readme": "https://github.com/leonawicz/trekcolors/blob/master/README.md",
-  "fileSize": "870.602KB",
+  "fileSize": "870.898KB",
   "contIntegration": [
     "https://travis-ci.org/leonawicz/trekcolors",
     "https://ci.appveyor.com/project/leonawicz/trekcolors",
