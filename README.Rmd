@@ -29,11 +29,22 @@ knitr::opts_chunk$set(
 
 The `trekcolors` package provides a collection of color palettes based on Star Trek. It also offers functions for custom palettes and `scale_*` functions for use with `ggplot2`.
 
+<p></p>
+<hr>
+*If you enjoy my R community contributions, consider [buying me a coffee in Ko-fi](ko-fi.com/leonawicz) (or through PayPal <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=DHMC76S85GJCY&source=url"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" /></a>) so I can keep developing and maintaining this and other packages :)*
+<hr>
+
 ## Installation
 
-You can install the development version of `trekcolors` from GitHub with:
+Install the CRAN release of `trekcolors` with
 
-``` r
+```r
+install.packages("trekcolors")
+```
+
+Install the development version from GitHub with
+
+```r
 # install.packages("remotes")
 remotes::install_github("leonawicz/trekcolors")
 ```
