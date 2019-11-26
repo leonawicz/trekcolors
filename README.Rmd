@@ -31,10 +31,6 @@ knitr::opts_chunk$set(
 
 The `trekcolors` package provides a collection of color palettes based on Star Trek. It also offers functions for custom palettes and `scale_*` functions for use with `ggplot2`.
 
-<hr>
-*If you enjoy my R community contributions, consider* ***[buying me a coffee in Ko-fi](https://ko-fi.com/leonawicz)*** *so I can keep developing and maintaining this and other packages :)*
-<hr>
-
 ## Installation
 
 Install the CRAN release of `trekcolors` with
@@ -141,7 +137,7 @@ trek_pal()
 view_trek_pals()
 ```
 
-## Packges in the trekverse
+## Packages in the trekverse
 
 <div class="row">
 <div class="col-sm-2">
@@ -169,6 +165,10 @@ Predefined and customizable Star Trek themed color palettes and related function
 <h4 style="padding:30px 0 0 0;margin-top:5px;margin-bottom:5px;"><a href="https://github.com/leonawicz/trekfont">trekfont</a>: A fonts package</h4>
 True (Trek) type fonts to style your Star Trek themed graphics text.
 </div></div>
+
+---
+
+*If you enjoy my R community contributions, consider* ***[buying me a coffee in Ko-fi](https://ko-fi.com/leonawicz)*** *so I can keep developing and maintaining this and other packages :)*
 
 ---
 

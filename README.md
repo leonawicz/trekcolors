@@ -31,14 +31,6 @@ The `trekcolors` package provides a collection of color palettes based
 on Star Trek. It also offers functions for custom palettes and `scale_*`
 functions for use with `ggplot2`.
 
-<hr>
-
-*If you enjoy my R community contributions, consider* ***[buying me a
-coffee in Ko-fi](https://ko-fi.com/leonawicz)*** *so I can keep
-developing and maintaining this and other packages :)*
-
-<hr>
-
 ## Installation
 
 Install the CRAN release of `trekcolors` with
@@ -230,13 +222,13 @@ view_trek_pals()
 
 <img src="man/figures/README-ex6-1.png" width="100%" />
 
-## Packges in the trekverse
+## Packages in the trekverse
 
 <div class="row">
 
 <div class="col-sm-2">
 
-<a href="https://github.com/leonawicz/rtrek"><img src="https://raw.githubusercontent.com/leonawicz/rtrek/master/man/figures/logo.png" style="margin-right:20px;margin-bottom:0;" width="60" align="left"></a>
+<a href="https://github.com/leonawicz/rtrek"><img src="https://raw.githubusercontent.com/leonawicz/rtrek/master/man/figures/logo.png" style="margin-right:20px;margin-bottom:0;" width="120" align="left"></a>
 
 </div>
 
@@ -262,7 +254,7 @@ and more.
 
 <div class="col-sm-2">
 
-<a href="https://github.com/leonawicz/trekcolors"><img src="https://raw.githubusercontent.com/leonawicz/trekcolors/master/man/figures/logo.png" style="margin-right:20px;margin-bottom:0;" width="60" align="left"></a>
+<a href="https://github.com/leonawicz/trekcolors"><img src="https://raw.githubusercontent.com/leonawicz/trekcolors/master/man/figures/logo.png" style="margin-right:20px;margin-bottom:0;" width="120" align="left"></a>
 
 </div>
 
@@ -288,7 +280,7 @@ functions.
 
 <div class="col-sm-2">
 
-<a href="https://github.com/leonawicz/trekfont"><img src="https://raw.githubusercontent.com/leonawicz/trekfont/master/man/figures/logo.png" style="margin-right:20px;margin-bottom:0;" width="60" align="left"></a>
+<a href="https://github.com/leonawicz/trekfont"><img src="https://raw.githubusercontent.com/leonawicz/trekfont/master/man/figures/logo.png" style="margin-right:20px;margin-bottom:0;" width="120" align="left"></a>
 
 </div>
 
@@ -306,6 +298,12 @@ True (Trek) type fonts to style your Star Trek themed graphics text.
 </div>
 
 </div>
+
+-----
+
+*If you enjoy my R community contributions, consider* ***[buying me a
+coffee in Ko-fi](https://ko-fi.com/leonawicz)*** *so I can keep
+developing and maintaining this and other packages :)*
 
 -----
 
