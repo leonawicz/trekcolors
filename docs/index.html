@@ -93,9 +93,10 @@
 <p><strong>Author:</strong> <a href="https://leonawicz.github.io/blog/">Matthew Leonawicz</a> <a href="https://orcid.org/0000-0001-9452-2771" target="orcid.widget"> <image class="orcid" src="https://members.orcid.org/sites/default/files/vector_iD_icon.svg" height="16"></image></a> <br><strong>License:</strong> <a href="https://opensource.org/licenses/MIT">MIT</a><br></p>
 <p><a href="http://www.repostatus.org/#active"><img src="http://www.repostatus.org/badges/latest/active.svg" alt="Project Status: Active – The project has reached a stable, usable state and is being actively developed."></a> <a href="https://travis-ci.org/leonawicz/trekcolors"><img src="https://travis-ci.org/leonawicz/trekcolors.svg?branch=master" alt="Travis build status"></a> <a href="https://ci.appveyor.com/project/leonawicz/trekcolors"><img src="https://ci.appveyor.com/api/projects/status/github/leonawicz/trekcolors?branch=master&amp;svg=true" alt="AppVeyor build status"></a> <a href="https://codecov.io/gh/leonawicz/trekcolors?branch=master"><img src="https://codecov.io/gh/leonawicz/trekcolors/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></p>
 <p><a href="https://cran.r-project.org/package=trekcolors"><img src="http://www.r-pkg.org/badges/version/trekcolors" alt="CRAN status"></a> <a href="https://cran.r-project.org/package=trekcolors"><img src="http://cranlogs.r-pkg.org/badges/grand-total/trekcolors" alt="CRAN downloads"></a> <a href="https://github.com/leonawicz/trekcolors"><img src="https://img.shields.io/github/stars/leonawicz/trekcolors.svg?style=social&amp;label=Github" alt="Github Stars"></a></p>
+<p><a href="https://ko-fi.com/leonawicz"><img src="https://img.shields.io/badge/Donate-Buy%20me%20a%20coffee-yellowgreen.svg" alt="Donate"></a></p>
 <p>The <code>trekcolors</code> package provides a collection of color palettes based on Star Trek. It also offers functions for custom palettes and <code>scale_*</code> functions for use with <code>ggplot2</code>.</p>
 <hr>
-<p><em>If you enjoy my R community contributions, consider</em> <strong><em><a href="https://ko-fi.com/leonawicz">buying me a coffee in Ko-fi</a></em></strong> <em>(or through PayPal <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=DHMC76S85GJCY&amp;source=url"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif"></a>) so I can keep developing and maintaining this and other packages :)</em></p>
+<p><em>If you enjoy my R community contributions, consider</em> <strong><em><a href="https://ko-fi.com/leonawicz">buying me a coffee in Ko-fi</a></em></strong> <em>so I can keep developing and maintaining this and other packages :)</em></p>
 <hr>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
@@ -119,11 +120,9 @@
 <a class="sourceLine" id="cb3-5" title="5"><span class="co">#&gt; [1] "#5B1414" "#AD722C" "#1A6384"</span></a>
 <a class="sourceLine" id="cb3-6" title="6"></a>
 <a class="sourceLine" id="cb3-7" title="7"><span class="kw"><a href="reference/trek_pal.html">trek_pal</a></span>(<span class="st">"lcars_2357"</span>)</a>
-<a class="sourceLine" id="cb3-8" title="8"><span class="co">#&gt; [1] "#FFFF99" "#FFCC99" "#FFCC66" "#FF9933" "#664466" "#CC99CC" "#99CCFF"</span></a>
-<a class="sourceLine" id="cb3-9" title="9"><span class="co">#&gt; [8] "#3366CC" "#006699"</span></a>
-<a class="sourceLine" id="cb3-10" title="10"><span class="kw"><a href="reference/lcars_pals.html">lcars_pal</a></span>(<span class="st">"2357"</span>) <span class="co"># there are some special functions for LCARS colors</span></a>
-<a class="sourceLine" id="cb3-11" title="11"><span class="co">#&gt; [1] "#FFFF99" "#FFCC99" "#FFCC66" "#FF9933" "#664466" "#CC99CC" "#99CCFF"</span></a>
-<a class="sourceLine" id="cb3-12" title="12"><span class="co">#&gt; [8] "#3366CC" "#006699"</span></a></code></pre></div>
+<a class="sourceLine" id="cb3-8" title="8"><span class="co">#&gt; [1] "#FFFF99" "#FFCC99" "#FFCC66" "#FF9933" "#664466" "#CC99CC" "#99CCFF" "#3366CC" "#006699"</span></a>
+<a class="sourceLine" id="cb3-9" title="9"><span class="kw"><a href="reference/lcars_pals.html">lcars_pal</a></span>(<span class="st">"2357"</span>) <span class="co"># there are some special functions for LCARS colors</span></a>
+<a class="sourceLine" id="cb3-10" title="10"><span class="co">#&gt; [1] "#FFFF99" "#FFCC99" "#FFCC66" "#FF9933" "#664466" "#CC99CC" "#99CCFF" "#3366CC" "#006699"</span></a></code></pre></div>
 <p>Preview the <code>starfleet</code> and <code>lcars_2357</code> palettes.</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1"><span class="kw"><a href="reference/trek_pal.html">view_trek_pals</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"starfleet"</span>, <span class="st">"lcars_2357"</span>))</a></code></pre></div>
 <p><img src="reference/figures/README-ex2-1.png" width="100%"></p>
@@ -172,32 +171,22 @@
 <div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" title="1"><span class="co"># lcars_pals() # print list of all LCARS palettes</span></a>
 <a class="sourceLine" id="cb14-2" title="2"></a>
 <a class="sourceLine" id="cb14-3" title="3"><span class="kw"><a href="reference/lcars_colors.html">lcars_colors</a></span>() <span class="co"># full set of unique names across the four palettes</span></a>
-<a class="sourceLine" id="cb14-4" title="4"><span class="co">#&gt;      pale-canary            tanoi     golden-tanoi      neon-carrot </span></a>
-<a class="sourceLine" id="cb14-5" title="5"><span class="co">#&gt;        "#FFFF99"        "#FFCC99"        "#FFCC66"        "#FF9933" </span></a>
-<a class="sourceLine" id="cb14-6" title="6"><span class="co">#&gt;         eggplant            lilac          anakiwa          mariner </span></a>
-<a class="sourceLine" id="cb14-7" title="7"><span class="co">#&gt;        "#664466"        "#CC99CC"        "#99CCFF"        "#3366CC" </span></a>
-<a class="sourceLine" id="cb14-8" title="8"><span class="co">#&gt;      bahama-blue        blue-bell          melrose          hopbush </span></a>
-<a class="sourceLine" id="cb14-9" title="9"><span class="co">#&gt;        "#006699"        "#9999CC"        "#9999FF"        "#CC6699" </span></a>
-<a class="sourceLine" id="cb14-10" title="10"><span class="co">#&gt;    chestnut-rose      orange-peel atomic-tangerine            danub </span></a>
-<a class="sourceLine" id="cb14-11" title="11"><span class="co">#&gt;        "#CC6666"        "#FF9966"        "#FF9900"        "#6688CC" </span></a>
-<a class="sourceLine" id="cb14-12" title="12"><span class="co">#&gt;           indigo  lavender-purple           cosmic       red-damask </span></a>
-<a class="sourceLine" id="cb14-13" title="13"><span class="co">#&gt;        "#4455BB"        "#9977AA"        "#774466"        "#DD6644" </span></a>
-<a class="sourceLine" id="cb14-14" title="14"><span class="co">#&gt;   medium-carmine          bourbon      sandy-brown       periwinkle </span></a>
-<a class="sourceLine" id="cb14-15" title="15"><span class="co">#&gt;        "#AA5533"        "#BB6622"        "#EE9955"        "#CCDDFF" </span></a>
-<a class="sourceLine" id="cb14-16" title="16"><span class="co">#&gt;      dodger-pale      dodger-soft        near-blue        navy-blue </span></a>
-<a class="sourceLine" id="cb14-17" title="17"><span class="co">#&gt;        "#5599FF"        "#3366FF"        "#0011EE"        "#000088" </span></a>
-<a class="sourceLine" id="cb14-18" title="18"><span class="co">#&gt;             husk             rust        tamarillo </span></a>
-<a class="sourceLine" id="cb14-19" title="19"><span class="co">#&gt;        "#BBAA55"        "#BB4411"        "#882211"</span></a>
-<a class="sourceLine" id="cb14-20" title="20"></a>
-<a class="sourceLine" id="cb14-21" title="21"><span class="kw"><a href="reference/lcars_colors.html">lcars_2357</a></span>() <span class="co"># specific color series; also 2369, 2375, 2379</span></a>
-<a class="sourceLine" id="cb14-22" title="22"><span class="co">#&gt;  pale-canary        tanoi golden-tanoi  neon-carrot     eggplant </span></a>
-<a class="sourceLine" id="cb14-23" title="23"><span class="co">#&gt;    "#FFFF99"    "#FFCC99"    "#FFCC66"    "#FF9933"    "#664466" </span></a>
-<a class="sourceLine" id="cb14-24" title="24"><span class="co">#&gt;        lilac      anakiwa      mariner  bahama-blue </span></a>
-<a class="sourceLine" id="cb14-25" title="25"><span class="co">#&gt;    "#CC99CC"    "#99CCFF"    "#3366CC"    "#006699"</span></a>
-<a class="sourceLine" id="cb14-26" title="26"></a>
-<a class="sourceLine" id="cb14-27" title="27"><span class="kw"><a href="reference/lcars_colors.html">lcars_2357</a></span>(<span class="st">"lilac"</span>, <span class="st">"mariner"</span>) <span class="co"># select by name</span></a>
-<a class="sourceLine" id="cb14-28" title="28"><span class="co">#&gt;     lilac   mariner </span></a>
-<a class="sourceLine" id="cb14-29" title="29"><span class="co">#&gt; "#CC99CC" "#3366CC"</span></a></code></pre></div>
+<a class="sourceLine" id="cb14-4" title="4"><span class="co">#&gt;      pale-canary            tanoi     golden-tanoi      neon-carrot         eggplant            lilac          anakiwa          mariner      bahama-blue        blue-bell </span></a>
+<a class="sourceLine" id="cb14-5" title="5"><span class="co">#&gt;        "#FFFF99"        "#FFCC99"        "#FFCC66"        "#FF9933"        "#664466"        "#CC99CC"        "#99CCFF"        "#3366CC"        "#006699"        "#9999CC" </span></a>
+<a class="sourceLine" id="cb14-6" title="6"><span class="co">#&gt;          melrose          hopbush    chestnut-rose      orange-peel atomic-tangerine            danub           indigo  lavender-purple           cosmic       red-damask </span></a>
+<a class="sourceLine" id="cb14-7" title="7"><span class="co">#&gt;        "#9999FF"        "#CC6699"        "#CC6666"        "#FF9966"        "#FF9900"        "#6688CC"        "#4455BB"        "#9977AA"        "#774466"        "#DD6644" </span></a>
+<a class="sourceLine" id="cb14-8" title="8"><span class="co">#&gt;   medium-carmine          bourbon      sandy-brown       periwinkle      dodger-pale      dodger-soft        near-blue        navy-blue             husk             rust </span></a>
+<a class="sourceLine" id="cb14-9" title="9"><span class="co">#&gt;        "#AA5533"        "#BB6622"        "#EE9955"        "#CCDDFF"        "#5599FF"        "#3366FF"        "#0011EE"        "#000088"        "#BBAA55"        "#BB4411" </span></a>
+<a class="sourceLine" id="cb14-10" title="10"><span class="co">#&gt;        tamarillo </span></a>
+<a class="sourceLine" id="cb14-11" title="11"><span class="co">#&gt;        "#882211"</span></a>
+<a class="sourceLine" id="cb14-12" title="12"></a>
+<a class="sourceLine" id="cb14-13" title="13"><span class="kw"><a href="reference/lcars_colors.html">lcars_2357</a></span>() <span class="co"># specific color series; also 2369, 2375, 2379</span></a>
+<a class="sourceLine" id="cb14-14" title="14"><span class="co">#&gt;  pale-canary        tanoi golden-tanoi  neon-carrot     eggplant        lilac      anakiwa      mariner  bahama-blue </span></a>
+<a class="sourceLine" id="cb14-15" title="15"><span class="co">#&gt;    "#FFFF99"    "#FFCC99"    "#FFCC66"    "#FF9933"    "#664466"    "#CC99CC"    "#99CCFF"    "#3366CC"    "#006699"</span></a>
+<a class="sourceLine" id="cb14-16" title="16"></a>
+<a class="sourceLine" id="cb14-17" title="17"><span class="kw"><a href="reference/lcars_colors.html">lcars_2357</a></span>(<span class="st">"lilac"</span>, <span class="st">"mariner"</span>) <span class="co"># select by name</span></a>
+<a class="sourceLine" id="cb14-18" title="18"><span class="co">#&gt;     lilac   mariner </span></a>
+<a class="sourceLine" id="cb14-19" title="19"><span class="co">#&gt; "#CC99CC" "#3366CC"</span></a></code></pre></div>
 </div>
 <div id="custom-palettes" class="section level3">
 <h3 class="hasAnchor">
@@ -205,12 +194,11 @@
 <p>In addition to these and all the other predefined palettes, custom palettes can be constructed using official LCARS color names. This is like <code>colorRampPalette</code> but with the ability to recognize official LCARS color names. This functionality was leveraged by <code>scale_color_lcars1</code> and <code>scale_color_lcars2</code> seen above when making sequential or divergent palettes based on specific LCARS colors for use with ggplot.</p>
 <div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb15-1" title="1">lcars_custom_pal &lt;-<span class="st"> </span><span class="kw"><a href="reference/lcars_pals.html">lcars_colors_pal</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"pale-canary"</span>, <span class="st">"eggplant"</span>))</a>
 <a class="sourceLine" id="cb15-2" title="2"><span class="kw">lcars_custom_pal</span>(<span class="dv">8</span>)</a>
-<a class="sourceLine" id="cb15-3" title="3"><span class="co">#&gt; [1] "#FFFF99" "#E9E491" "#D3C98A" "#BDAE83" "#A7947B" "#917974" "#7B5E6D"</span></a>
-<a class="sourceLine" id="cb15-4" title="4"><span class="co">#&gt; [8] "#664466"</span></a>
-<a class="sourceLine" id="cb15-5" title="5"></a>
-<a class="sourceLine" id="cb15-6" title="6">p &lt;-<span class="st"> </span><span class="kw">ggplot</span>(diamonds, <span class="kw">aes</span>(carat, <span class="kw">stat</span>(count), <span class="dt">fill =</span> cut)) <span class="op">+</span></a>
-<a class="sourceLine" id="cb15-7" title="7"><span class="st">  </span><span class="kw">geom_density</span>(<span class="dt">position =</span> <span class="st">"fill"</span>)</a>
-<a class="sourceLine" id="cb15-8" title="8">p <span class="op">+</span><span class="st"> </span><span class="kw"><a href="reference/scale_lcars.html">scale_fill_lcars2</a></span>(<span class="st">"pale-canary"</span>, <span class="st">"danub"</span>)</a></code></pre></div>
+<a class="sourceLine" id="cb15-3" title="3"><span class="co">#&gt; [1] "#FFFF99" "#E9E491" "#D3C98A" "#BDAE83" "#A7947B" "#917974" "#7B5E6D" "#664466"</span></a>
+<a class="sourceLine" id="cb15-4" title="4"></a>
+<a class="sourceLine" id="cb15-5" title="5">p &lt;-<span class="st"> </span><span class="kw">ggplot</span>(diamonds, <span class="kw">aes</span>(carat, <span class="kw">stat</span>(count), <span class="dt">fill =</span> cut)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb15-6" title="6"><span class="st">  </span><span class="kw">geom_density</span>(<span class="dt">position =</span> <span class="st">"fill"</span>)</a>
+<a class="sourceLine" id="cb15-7" title="7">p <span class="op">+</span><span class="st"> </span><span class="kw"><a href="reference/scale_lcars.html">scale_fill_lcars2</a></span>(<span class="st">"pale-canary"</span>, <span class="st">"danub"</span>)</a></code></pre></div>
 <p><img src="reference/figures/README-ex5-1.png" width="100%"></p>
 <div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" title="1"></a>
 <a class="sourceLine" id="cb16-2" title="2"><span class="co"># p + scale_fill_manual(values = lcars_custom_pal(8)) # equivalent</span></a>
@@ -225,21 +213,14 @@
 <a href="#all-predefined-palettes" class="anchor"></a>All predefined palettes</h3>
 <div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" title="1"><span class="co"># See available palette names</span></a>
 <a class="sourceLine" id="cb18-2" title="2"><span class="kw"><a href="reference/trek_pal.html">trek_pal</a></span>()</a>
-<a class="sourceLine" id="cb18-3" title="3"><span class="co">#&gt;  [1] "andorian"            "bajoran"             "borg"               </span></a>
-<a class="sourceLine" id="cb18-4" title="4"><span class="co">#&gt;  [4] "breen"               "breen2"              "dominion"           </span></a>
-<a class="sourceLine" id="cb18-5" title="5"><span class="co">#&gt;  [7] "enara"               "enara2"              "ferengi"            </span></a>
-<a class="sourceLine" id="cb18-6" title="6"><span class="co">#&gt; [10] "gorn"                "iconian"             "klingon"            </span></a>
-<a class="sourceLine" id="cb18-7" title="7"><span class="co">#&gt; [13] "lcars_series"        "lcars_2357"          "lcars_2369"         </span></a>
-<a class="sourceLine" id="cb18-8" title="8"><span class="co">#&gt; [16] "lcars_2375"          "lcars_2379"          "lcars_alt"          </span></a>
-<a class="sourceLine" id="cb18-9" title="9"><span class="co">#&gt; [19] "lcars_first_contact" "lcars_nemesis"       "lcars_nx01"         </span></a>
-<a class="sourceLine" id="cb18-10" title="10"><span class="co">#&gt; [22] "lcars_29c"           "lcars_23c"           "lcars_red_alert"    </span></a>
-<a class="sourceLine" id="cb18-11" title="11"><span class="co">#&gt; [25] "lcars_cardassian"    "romulan"             "romulan2"           </span></a>
-<a class="sourceLine" id="cb18-12" title="12"><span class="co">#&gt; [28] "starfleet"           "starfleet2"          "tholian"            </span></a>
-<a class="sourceLine" id="cb18-13" title="13"><span class="co">#&gt; [31] "terran"              "ufp"                 "red_alert"          </span></a>
-<a class="sourceLine" id="cb18-14" title="14"><span class="co">#&gt; [34] "yellow_alert"        "black_alert"</span></a>
-<a class="sourceLine" id="cb18-15" title="15"></a>
-<a class="sourceLine" id="cb18-16" title="16"><span class="co"># view all predefined palettes</span></a>
-<a class="sourceLine" id="cb18-17" title="17"><span class="kw"><a href="reference/trek_pal.html">view_trek_pals</a></span>()</a></code></pre></div>
+<a class="sourceLine" id="cb18-3" title="3"><span class="co">#&gt;  [1] "andorian"            "bajoran"             "borg"                "breen"               "breen2"              "dominion"            "enara"              </span></a>
+<a class="sourceLine" id="cb18-4" title="4"><span class="co">#&gt;  [8] "enara2"              "ferengi"             "gorn"                "iconian"             "klingon"             "lcars_series"        "lcars_2357"         </span></a>
+<a class="sourceLine" id="cb18-5" title="5"><span class="co">#&gt; [15] "lcars_2369"          "lcars_2375"          "lcars_2379"          "lcars_alt"           "lcars_first_contact" "lcars_nemesis"       "lcars_nx01"         </span></a>
+<a class="sourceLine" id="cb18-6" title="6"><span class="co">#&gt; [22] "lcars_29c"           "lcars_23c"           "lcars_red_alert"     "lcars_cardassian"    "romulan"             "romulan2"            "starfleet"          </span></a>
+<a class="sourceLine" id="cb18-7" title="7"><span class="co">#&gt; [29] "starfleet2"          "tholian"             "terran"              "ufp"                 "red_alert"           "yellow_alert"        "black_alert"</span></a>
+<a class="sourceLine" id="cb18-8" title="8"></a>
+<a class="sourceLine" id="cb18-9" title="9"><span class="co"># view all predefined palettes</span></a>
+<a class="sourceLine" id="cb18-10" title="10"><span class="kw"><a href="reference/trek_pal.html">view_trek_pals</a></span>()</a></code></pre></div>
 <p><img src="reference/figures/README-ex6-1.png" width="100%"></p>
 </div>
 </div>

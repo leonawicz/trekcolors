@@ -27,10 +27,12 @@ knitr::opts_chunk$set(
 [![CRAN downloads](http://cranlogs.r-pkg.org/badges/grand-total/trekcolors)](https://cran.r-project.org/package=trekcolors) 
 [![Github Stars](https://img.shields.io/github/stars/leonawicz/trekcolors.svg?style=social&label=Github)](https://github.com/leonawicz/trekcolors)
 
+[![Donate](https://img.shields.io/badge/Donate-Buy%20me%20a%20coffee-yellowgreen.svg)](https://ko-fi.com/leonawicz)
+
 The `trekcolors` package provides a collection of color palettes based on Star Trek. It also offers functions for custom palettes and `scale_*` functions for use with `ggplot2`.
 
 <hr>
-*If you enjoy my R community contributions, consider* ***[buying me a coffee in Ko-fi](https://ko-fi.com/leonawicz)*** *(or through PayPal <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=DHMC76S85GJCY&source=url"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" /></a>) so I can keep developing and maintaining this and other packages :)*
+*If you enjoy my R community contributions, consider* ***[buying me a coffee in Ko-fi](https://ko-fi.com/leonawicz)*** *so I can keep developing and maintaining this and other packages :)*
 <hr>
 
 ## Installation

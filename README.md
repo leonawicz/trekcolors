@@ -25,6 +25,8 @@ downloads](http://cranlogs.r-pkg.org/badges/grand-total/trekcolors)](https://cra
 [![Github
 Stars](https://img.shields.io/github/stars/leonawicz/trekcolors.svg?style=social&label=Github)](https://github.com/leonawicz/trekcolors)
 
+[![Donate](https://img.shields.io/badge/Donate-Buy%20me%20a%20coffee-yellowgreen.svg)](https://ko-fi.com/leonawicz)
+
 The `trekcolors` package provides a collection of color palettes based
 on Star Trek. It also offers functions for custom palettes and `scale_*`
 functions for use with `ggplot2`.
@@ -32,9 +34,8 @@ functions for use with `ggplot2`.
 <hr>
 
 *If you enjoy my R community contributions, consider* ***[buying me a
-coffee in Ko-fi](https://ko-fi.com/leonawicz)*** *(or through PayPal
-<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=DHMC76S85GJCY&source=url"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" /></a>)
-so I can keep developing and maintaining this and other packages :)*
+coffee in Ko-fi](https://ko-fi.com/leonawicz)*** *so I can keep
+developing and maintaining this and other packages :)*
 
 <hr>
 
@@ -65,11 +66,9 @@ trek_pal("starfleet")
 #> [1] "#5B1414" "#AD722C" "#1A6384"
 
 trek_pal("lcars_2357")
-#> [1] "#FFFF99" "#FFCC99" "#FFCC66" "#FF9933" "#664466" "#CC99CC" "#99CCFF"
-#> [8] "#3366CC" "#006699"
+#> [1] "#FFFF99" "#FFCC99" "#FFCC66" "#FF9933" "#664466" "#CC99CC" "#99CCFF" "#3366CC" "#006699"
 lcars_pal("2357") # there are some special functions for LCARS colors
-#> [1] "#FFFF99" "#FFCC99" "#FFCC66" "#FF9933" "#664466" "#CC99CC" "#99CCFF"
-#> [8] "#3366CC" "#006699"
+#> [1] "#FFFF99" "#FFCC99" "#FFCC66" "#FF9933" "#664466" "#CC99CC" "#99CCFF" "#3366CC" "#006699"
 ```
 
 Preview the `starfleet` and `lcars_2357` palettes.
@@ -160,28 +159,18 @@ special in that these official standard LCARS colors have formal names.
 # lcars_pals() # print list of all LCARS palettes
 
 lcars_colors() # full set of unique names across the four palettes
-#>      pale-canary            tanoi     golden-tanoi      neon-carrot 
-#>        "#FFFF99"        "#FFCC99"        "#FFCC66"        "#FF9933" 
-#>         eggplant            lilac          anakiwa          mariner 
-#>        "#664466"        "#CC99CC"        "#99CCFF"        "#3366CC" 
-#>      bahama-blue        blue-bell          melrose          hopbush 
-#>        "#006699"        "#9999CC"        "#9999FF"        "#CC6699" 
-#>    chestnut-rose      orange-peel atomic-tangerine            danub 
-#>        "#CC6666"        "#FF9966"        "#FF9900"        "#6688CC" 
-#>           indigo  lavender-purple           cosmic       red-damask 
-#>        "#4455BB"        "#9977AA"        "#774466"        "#DD6644" 
-#>   medium-carmine          bourbon      sandy-brown       periwinkle 
-#>        "#AA5533"        "#BB6622"        "#EE9955"        "#CCDDFF" 
-#>      dodger-pale      dodger-soft        near-blue        navy-blue 
-#>        "#5599FF"        "#3366FF"        "#0011EE"        "#000088" 
-#>             husk             rust        tamarillo 
-#>        "#BBAA55"        "#BB4411"        "#882211"
+#>      pale-canary            tanoi     golden-tanoi      neon-carrot         eggplant            lilac          anakiwa          mariner      bahama-blue        blue-bell 
+#>        "#FFFF99"        "#FFCC99"        "#FFCC66"        "#FF9933"        "#664466"        "#CC99CC"        "#99CCFF"        "#3366CC"        "#006699"        "#9999CC" 
+#>          melrose          hopbush    chestnut-rose      orange-peel atomic-tangerine            danub           indigo  lavender-purple           cosmic       red-damask 
+#>        "#9999FF"        "#CC6699"        "#CC6666"        "#FF9966"        "#FF9900"        "#6688CC"        "#4455BB"        "#9977AA"        "#774466"        "#DD6644" 
+#>   medium-carmine          bourbon      sandy-brown       periwinkle      dodger-pale      dodger-soft        near-blue        navy-blue             husk             rust 
+#>        "#AA5533"        "#BB6622"        "#EE9955"        "#CCDDFF"        "#5599FF"        "#3366FF"        "#0011EE"        "#000088"        "#BBAA55"        "#BB4411" 
+#>        tamarillo 
+#>        "#882211"
 
 lcars_2357() # specific color series; also 2369, 2375, 2379
-#>  pale-canary        tanoi golden-tanoi  neon-carrot     eggplant 
-#>    "#FFFF99"    "#FFCC99"    "#FFCC66"    "#FF9933"    "#664466" 
-#>        lilac      anakiwa      mariner  bahama-blue 
-#>    "#CC99CC"    "#99CCFF"    "#3366CC"    "#006699"
+#>  pale-canary        tanoi golden-tanoi  neon-carrot     eggplant        lilac      anakiwa      mariner  bahama-blue 
+#>    "#FFFF99"    "#FFCC99"    "#FFCC66"    "#FF9933"    "#664466"    "#CC99CC"    "#99CCFF"    "#3366CC"    "#006699"
 
 lcars_2357("lilac", "mariner") # select by name
 #>     lilac   mariner 
@@ -200,8 +189,7 @@ palettes based on specific LCARS colors for use with ggplot.
 ``` r
 lcars_custom_pal <- lcars_colors_pal(c("pale-canary", "eggplant"))
 lcars_custom_pal(8)
-#> [1] "#FFFF99" "#E9E491" "#D3C98A" "#BDAE83" "#A7947B" "#917974" "#7B5E6D"
-#> [8] "#664466"
+#> [1] "#FFFF99" "#E9E491" "#D3C98A" "#BDAE83" "#A7947B" "#917974" "#7B5E6D" "#664466"
 
 p <- ggplot(diamonds, aes(carat, stat(count), fill = cut)) +
   geom_density(position = "fill")
@@ -230,18 +218,11 @@ p + scale_fill_lcars2("pale-canary", "danub", dark = TRUE, divergent = TRUE)
 ``` r
 # See available palette names
 trek_pal()
-#>  [1] "andorian"            "bajoran"             "borg"               
-#>  [4] "breen"               "breen2"              "dominion"           
-#>  [7] "enara"               "enara2"              "ferengi"            
-#> [10] "gorn"                "iconian"             "klingon"            
-#> [13] "lcars_series"        "lcars_2357"          "lcars_2369"         
-#> [16] "lcars_2375"          "lcars_2379"          "lcars_alt"          
-#> [19] "lcars_first_contact" "lcars_nemesis"       "lcars_nx01"         
-#> [22] "lcars_29c"           "lcars_23c"           "lcars_red_alert"    
-#> [25] "lcars_cardassian"    "romulan"             "romulan2"           
-#> [28] "starfleet"           "starfleet2"          "tholian"            
-#> [31] "terran"              "ufp"                 "red_alert"          
-#> [34] "yellow_alert"        "black_alert"
+#>  [1] "andorian"            "bajoran"             "borg"                "breen"               "breen2"              "dominion"            "enara"              
+#>  [8] "enara2"              "ferengi"             "gorn"                "iconian"             "klingon"             "lcars_series"        "lcars_2357"         
+#> [15] "lcars_2369"          "lcars_2375"          "lcars_2379"          "lcars_alt"           "lcars_first_contact" "lcars_nemesis"       "lcars_nx01"         
+#> [22] "lcars_29c"           "lcars_23c"           "lcars_red_alert"     "lcars_cardassian"    "romulan"             "romulan2"            "starfleet"          
+#> [29] "starfleet2"          "tholian"             "terran"              "ufp"                 "red_alert"           "yellow_alert"        "black_alert"
 
 # view all predefined palettes
 view_trek_pals()
