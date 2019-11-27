@@ -1,12 +1,8 @@
 url: http://leonawicz.github.io/trekcolors
 
-template:
-  params:
-    ganalytics: UA-46129458-3
-
 authors:
   Author Name:
-    href: http://leonawicz.github.io/
+    href: https://github.com/leonawicz
 
 reference:
 - title: Datasets
