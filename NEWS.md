@@ -1,3 +1,7 @@
+# trekcolors 0.1.2
+
+* In progress.
+
 # trekcolors 0.1.1
 
 * Minor test suite updates for CRAN.
