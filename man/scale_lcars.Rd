@@ -10,25 +10,45 @@
 \alias{scale_fill_lcars2}
 \title{Color and fill scale functions for LCARS colors}
 \usage{
-scale_color_lcars(palette = "2357", discrete = TRUE, reverse = FALSE,
-  ...)
+scale_color_lcars(palette = "2357", discrete = TRUE, reverse = FALSE, ...)
 
-scale_color_lcars1(color = "atomic-tangerine", discrete = TRUE,
-  reverse = FALSE, dark = FALSE, ...)
+scale_color_lcars1(
+  color = "atomic-tangerine",
+  discrete = TRUE,
+  reverse = FALSE,
+  dark = FALSE,
+  ...
+)
 
-scale_color_lcars2(low = "atomic-tangerine", high = "near-blue",
-  discrete = TRUE, reverse = FALSE, dark = FALSE,
-  divergent = FALSE, ...)
+scale_color_lcars2(
+  low = "atomic-tangerine",
+  high = "near-blue",
+  discrete = TRUE,
+  reverse = FALSE,
+  dark = FALSE,
+  divergent = FALSE,
+  ...
+)
 
-scale_fill_lcars(palette = "2357", discrete = TRUE, reverse = FALSE,
-  ...)
+scale_fill_lcars(palette = "2357", discrete = TRUE, reverse = FALSE, ...)
 
-scale_fill_lcars1(color = "atomic-tangerine", discrete = TRUE,
-  reverse = FALSE, dark = FALSE, ...)
+scale_fill_lcars1(
+  color = "atomic-tangerine",
+  discrete = TRUE,
+  reverse = FALSE,
+  dark = FALSE,
+  ...
+)
 
-scale_fill_lcars2(low = "atomic-tangerine", high = "near-blue",
-  discrete = TRUE, reverse = FALSE, dark = FALSE,
-  divergent = FALSE, ...)
+scale_fill_lcars2(
+  low = "atomic-tangerine",
+  high = "near-blue",
+  discrete = TRUE,
+  reverse = FALSE,
+  dark = FALSE,
+  divergent = FALSE,
+  ...
+)
 }
 \arguments{
 \item{palette}{character, name of palette in \code{lcars_pals}.}

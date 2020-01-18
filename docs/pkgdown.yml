@@ -3,6 +3,6 @@ pkgdown: 1.4.1
 pkgdown_sha: ~
 articles: []
 urls:
-  reference: http://leonawicz.github.io/trekcolors/reference
-  article: http://leonawicz.github.io/trekcolors/articles
+  reference: https://leonawicz.github.io/trekcolors/reference
+  article: https://leonawicz.github.io/trekcolors/articles
 

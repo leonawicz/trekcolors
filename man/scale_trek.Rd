@@ -6,11 +6,9 @@
 \alias{scale_fill_trek}
 \title{Color and fill scale functions for Star Trek palettes}
 \usage{
-scale_color_trek(palette = "starfleet", discrete = TRUE,
-  reverse = FALSE, ...)
+scale_color_trek(palette = "starfleet", discrete = TRUE, reverse = FALSE, ...)
 
-scale_fill_trek(palette = "starfleet", discrete = TRUE,
-  reverse = FALSE, ...)
+scale_fill_trek(palette = "starfleet", discrete = TRUE, reverse = FALSE, ...)
 }
 \arguments{
 \item{palette}{character, name of Star Trek palette. See \code{trek_pal()} for list of palette names.}
