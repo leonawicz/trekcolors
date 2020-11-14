@@ -14,10 +14,9 @@
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
-    "version": "3.6.2",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 3.6.2 (2019-12-12)",
+  "runtimePlatform": "R version 4.0.3 (2020-10-10)",
   "author": [
     {
       "@type": "Person",
@@ -111,12 +110,8 @@
   ],
   "releaseNotes": "https://github.com/leonawicz/trekcolors/blob/master/NEWS.md",
   "readme": "https://github.com/leonawicz/trekcolors/blob/master/README.md",
-  "fileSize": "870.849KB",
-  "contIntegration": [
-    "https://travis-ci.org/leonawicz/trekcolors",
-    "https://ci.appveyor.com/project/leonawicz/trekcolors",
-    "https://codecov.io/gh/leonawicz/trekcolors?branch=master"
-  ],
+  "fileSize": "4394.55KB",
+  "contIntegration": ["https://travis-ci.org/leonawicz/trekcolors", "https://ci.appveyor.com/project/leonawicz/trekcolors", "https://codecov.io/gh/leonawicz/trekcolors?branch=master"],
   "developmentStatus": "http://www.repostatus.org/#active",
   "keywords": [
     "r-package",

@@ -1,6 +1,6 @@
 # trekcolors 0.1.2
 
-* In progress.
+* Documentation updates.
 
 # trekcolors 0.1.1
 

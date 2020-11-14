@@ -27,8 +27,6 @@ knitr::opts_chunk$set(
 [![CRAN downloads](http://cranlogs.r-pkg.org/badges/grand-total/trekcolors)](https://cran.r-project.org/package=trekcolors) 
 [![Github Stars](https://img.shields.io/github/stars/leonawicz/trekcolors.svg?style=social&label=Github)](https://github.com/leonawicz/trekcolors)
 
-[![Donate](https://img.shields.io/badge/Donate-Buy%20me%20a%20coffee-yellowgreen.svg)](https://ko-fi.com/leonawicz)
-
 The `trekcolors` package provides a collection of color palettes based on Star Trek. It also offers functions for custom palettes and `scale_*` functions for use with `ggplot2`.
 
 ## Installation
@@ -177,7 +175,19 @@ True (Trek) type fonts to style your Star Trek themed graphics text.
 
 <br>
 
-*If you enjoy my R community contributions, consider* ***[buying me a coffee in Ko-fi](https://ko-fi.com/leonawicz)*** *so I can keep developing and maintaining this and other packages :)*
+## Citation
+
+Matthew Leonawicz (2020). trekcolors: Star Trek Color Palettes. R package version 0.1.2. https://CRAN.R-project.org/package=trekcolors
+
+## Contribute
+
+Contributions are welcome. Contribute through GitHub via pull request. Please create an issue first if it is regarding any substantive feature add or change.
+
+If you enjoy my open source R community contributions, please consider a donation :).
+
+* [Buy me a coffee in Ko-fi](https://ko-fi.com/leonawicz)
+* `leonawicz.crypto`
+* `mfl$payid.crypto.com`
 
 ---
 

@@ -4,7 +4,9 @@
 \name{trekpals}
 \alias{trekpals}
 \title{Star Trek color palettes.}
-\format{A named list.}
+\format{
+A named list.
+}
 \usage{
 trekpals
 }
