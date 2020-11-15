@@ -10,7 +10,7 @@
 
 [![Project Status: Active – The project has reached a stable, usable
 state and is being actively
-developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
+developed.](https://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/)
 [![Travis build
 status](https://travis-ci.org/leonawicz/trekcolors.svg?branch=master)](https://travis-ci.org/leonawicz/trekcolors)
 [![AppVeyor build

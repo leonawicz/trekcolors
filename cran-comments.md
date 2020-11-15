@@ -11,4 +11,4 @@
 
 0 errors | 0 warnings | 0 notes
 
-* This is an update release.
+* Fixed URL in Readme and resubmitted.
