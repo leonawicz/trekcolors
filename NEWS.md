@@ -1,3 +1,7 @@
+# trekcolors 0.1.3
+
+* Minor updates.
+
 # trekcolors 0.1.2
 
 * Documentation updates.

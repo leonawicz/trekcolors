@@ -5,7 +5,7 @@
 
 **Author:** [Matthew Leonawicz](https://github.com/leonawicz)
 <a href="https://orcid.org/0000-0001-9452-2771" target="orcid.widget">
-<image class="orcid" src="https://members.orcid.org/sites/default/files/vector_iD_icon.svg" height="16"></a>
+<img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16" /></a>
 <br/> **License:** [MIT](https://opensource.org/licenses/MIT)<br/>
 
 [![Project Status: Active – The project has reached a stable, usable
@@ -208,11 +208,11 @@ p + scale_fill_lcars2("pale-canary", "danub", dark = TRUE, divergent = TRUE)
 ``` r
 # See available palette names
 trek_pal()
-#>  [1] "andorian"            "bajoran"             "borg"                "breen"               "breen2"              "dominion"            "enara"              
-#>  [8] "enara2"              "ferengi"             "gorn"                "iconian"             "klingon"             "lcars_series"        "lcars_2357"         
-#> [15] "lcars_2369"          "lcars_2375"          "lcars_2379"          "lcars_alt"           "lcars_first_contact" "lcars_nemesis"       "lcars_nx01"         
-#> [22] "lcars_29c"           "lcars_23c"           "lcars_red_alert"     "lcars_cardassian"    "romulan"             "romulan2"            "starfleet"          
-#> [29] "starfleet2"          "tholian"             "terran"              "ufp"                 "red_alert"           "yellow_alert"        "black_alert"
+#>  [1] "andorian"            "bajoran"             "borg"                "breen"               "breen2"              "dominion"            "enara"               "enara2"             
+#>  [9] "ferengi"             "gorn"                "iconian"             "klingon"             "lcars_series"        "lcars_2357"          "lcars_2369"          "lcars_2375"         
+#> [17] "lcars_2379"          "lcars_alt"           "lcars_first_contact" "lcars_nemesis"       "lcars_nx01"          "lcars_29c"           "lcars_23c"           "lcars_red_alert"    
+#> [25] "lcars_cardassian"    "romulan"             "romulan2"            "starfleet"           "starfleet2"          "tholian"             "terran"              "ufp"                
+#> [33] "red_alert"           "yellow_alert"        "black_alert"
 
 # view all predefined palettes
 view_trek_pals()
@@ -327,21 +327,14 @@ True (Trek) type fonts to style your Star Trek themed graphics text.
 
 ## Citation
 
-Matthew Leonawicz (2020). trekcolors: Star Trek Color Palettes. R
-package version 0.1.2. <https://CRAN.R-project.org/package=trekcolors>
+Matthew Leonawicz (2021). trekcolors: Star Trek Color Palettes. R
+package version 0.1.3. <https://CRAN.R-project.org/package=trekcolors>
 
 ## Contribute
 
 Contributions are welcome. Contribute through GitHub via pull request.
 Please create an issue first if it is regarding any substantive feature
 add or change.
-
-If you enjoy my open source R community contributions, please consider a
-donation :).
-
-  - [Buy me a coffee in Ko-fi](https://ko-fi.com/leonawicz)
-  - `leonawicz.crypto`
-  - `mfl$payid.crypto.com`
 
 -----
 

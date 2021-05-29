@@ -10,19 +10,19 @@
   "codeRepository": "https://github.com/leonawicz/trekcolors",
   "issueTracker": "https://github.com/leonawicz/trekcolors/issues",
   "license": "https://spdx.org/licenses/MIT",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 4.0.3 (2020-10-10)",
+  "runtimePlatform": "R version 4.0.5 (2021-03-31)",
   "author": [
     {
       "@type": "Person",
       "givenName": "Matthew",
       "familyName": "Leonawicz",
-      "email": "matt_leonawicz@esource.com",
+      "email": "mfleonawicz@gmail.com",
       "@id": "https://orcid.org/0000-0001-9452-2771"
     }
   ],
@@ -34,7 +34,7 @@
       "@type": "Person",
       "givenName": "Matthew",
       "familyName": "Leonawicz",
-      "email": "matt_leonawicz@esource.com",
+      "email": "mfleonawicz@gmail.com",
       "@id": "https://orcid.org/0000-0001-9452-2771"
     }
   ],
@@ -110,9 +110,9 @@
   ],
   "releaseNotes": "https://github.com/leonawicz/trekcolors/blob/master/NEWS.md",
   "readme": "https://github.com/leonawicz/trekcolors/blob/master/README.md",
-  "fileSize": "4394.55KB",
+  "fileSize": "4363.933KB",
   "contIntegration": ["https://travis-ci.org/leonawicz/trekcolors", "https://ci.appveyor.com/project/leonawicz/trekcolors", "https://codecov.io/gh/leonawicz/trekcolors?branch=master"],
-  "developmentStatus": "http://www.repostatus.org/#active",
+  "developmentStatus": "https://www.repostatus.org/",
   "keywords": [
     "r-package",
     "star-trek",
