@@ -5,6 +5,9 @@ authors:
     href: https://github.com/leonawicz
 
 reference:
+- title: Package
+  contents:
+  - trekcolors
 - title: Datasets
   contents:
   - trekpals

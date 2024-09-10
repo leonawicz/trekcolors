@@ -3,27 +3,21 @@
 
 # trekcolors <img src="man/figures/logo.png" style="margin-left:10px;margin-bottom:5px;" width="120" align="right">
 
-**Author:** [Matthew Leonawicz](https://github.com/leonawicz)
-<a href="https://orcid.org/0000-0001-9452-2771" target="orcid.widget">
-<img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16" /></a>
-<br/> **License:** [MIT](https://opensource.org/licenses/MIT)<br/>
+<!-- badges: start -->
 
 [![Project Status: Active – The project has reached a stable, usable
 state and is being actively
 developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/)
-[![Travis build
-status](https://travis-ci.org/leonawicz/trekcolors.svg?branch=master)](https://travis-ci.org/leonawicz/trekcolors)
-[![AppVeyor build
-status](https://ci.appveyor.com/api/projects/status/github/leonawicz/trekcolors?branch=master&svg=true)](https://ci.appveyor.com/project/leonawicz/trekcolors)
+[![R-CMD-check](https://github.com/leonawicz/trekcolors/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/leonawicz/trekcolors/actions/workflows/R-CMD-check.yaml)
 [![Codecov test
-coverage](https://codecov.io/gh/leonawicz/trekcolors/branch/master/graph/badge.svg)](https://codecov.io/gh/leonawicz/trekcolors?branch=master)
-
+coverage](https://codecov.io/gh/leonawicz/trekcolors/graph/badge.svg)](https://app.codecov.io/gh/leonawicz/trekcolors)
 [![CRAN
-status](http://www.r-pkg.org/badges/version/trekcolors)](https://cran.r-project.org/package=trekcolors)
+status](https://www.r-pkg.org/badges/version/trekcolors)](https://CRAN.R-project.org/package=trekcolors)
 [![CRAN
-downloads](http://cranlogs.r-pkg.org/badges/grand-total/trekcolors)](https://cran.r-project.org/package=trekcolors)
+downloads](https://cranlogs.r-pkg.org/badges/grand-total/trekcolors)](https://cran.r-project.org/package=trekcolors)
 [![Github
 Stars](https://img.shields.io/github/stars/leonawicz/trekcolors.svg?style=social&label=Github)](https://github.com/leonawicz/trekcolors)
+<!-- badges: end -->
 
 The `trekcolors` package provides a collection of color palettes based
 on Star Trek. It also offers functions for custom palettes and `scale_*`
@@ -56,9 +50,11 @@ trek_pal("starfleet")
 #> [1] "#5B1414" "#AD722C" "#1A6384"
 
 trek_pal("lcars_2357")
-#> [1] "#FFFF99" "#FFCC99" "#FFCC66" "#FF9933" "#664466" "#CC99CC" "#99CCFF" "#3366CC" "#006699"
+#> [1] "#FFFF99" "#FFCC99" "#FFCC66" "#FF9933" "#664466" "#CC99CC" "#99CCFF"
+#> [8] "#3366CC" "#006699"
 lcars_pal("2357") # there are some special functions for LCARS colors
-#> [1] "#FFFF99" "#FFCC99" "#FFCC66" "#FF9933" "#664466" "#CC99CC" "#99CCFF" "#3366CC" "#006699"
+#> [1] "#FFFF99" "#FFCC99" "#FFCC66" "#FF9933" "#664466" "#CC99CC" "#99CCFF"
+#> [8] "#3366CC" "#006699"
 ```
 
 Preview the `starfleet` and `lcars_2357` palettes.
@@ -149,18 +145,28 @@ special in that these official standard LCARS colors have formal names.
 # lcars_pals() # print list of all LCARS palettes
 
 lcars_colors() # full set of unique names across the four palettes
-#>      pale-canary            tanoi     golden-tanoi      neon-carrot         eggplant            lilac          anakiwa          mariner      bahama-blue        blue-bell 
-#>        "#FFFF99"        "#FFCC99"        "#FFCC66"        "#FF9933"        "#664466"        "#CC99CC"        "#99CCFF"        "#3366CC"        "#006699"        "#9999CC" 
-#>          melrose          hopbush    chestnut-rose      orange-peel atomic-tangerine            danub           indigo  lavender-purple           cosmic       red-damask 
-#>        "#9999FF"        "#CC6699"        "#CC6666"        "#FF9966"        "#FF9900"        "#6688CC"        "#4455BB"        "#9977AA"        "#774466"        "#DD6644" 
-#>   medium-carmine          bourbon      sandy-brown       periwinkle      dodger-pale      dodger-soft        near-blue        navy-blue             husk             rust 
-#>        "#AA5533"        "#BB6622"        "#EE9955"        "#CCDDFF"        "#5599FF"        "#3366FF"        "#0011EE"        "#000088"        "#BBAA55"        "#BB4411" 
-#>        tamarillo 
-#>        "#882211"
+#>      pale-canary            tanoi     golden-tanoi      neon-carrot 
+#>        "#FFFF99"        "#FFCC99"        "#FFCC66"        "#FF9933" 
+#>         eggplant            lilac          anakiwa          mariner 
+#>        "#664466"        "#CC99CC"        "#99CCFF"        "#3366CC" 
+#>      bahama-blue        blue-bell          melrose          hopbush 
+#>        "#006699"        "#9999CC"        "#9999FF"        "#CC6699" 
+#>    chestnut-rose      orange-peel atomic-tangerine            danub 
+#>        "#CC6666"        "#FF9966"        "#FF9900"        "#6688CC" 
+#>           indigo  lavender-purple           cosmic       red-damask 
+#>        "#4455BB"        "#9977AA"        "#774466"        "#DD6644" 
+#>   medium-carmine          bourbon      sandy-brown       periwinkle 
+#>        "#AA5533"        "#BB6622"        "#EE9955"        "#CCDDFF" 
+#>      dodger-pale      dodger-soft        near-blue        navy-blue 
+#>        "#5599FF"        "#3366FF"        "#0011EE"        "#000088" 
+#>             husk             rust        tamarillo 
+#>        "#BBAA55"        "#BB4411"        "#882211"
 
 lcars_2357() # specific color series; also 2369, 2375, 2379
-#>  pale-canary        tanoi golden-tanoi  neon-carrot     eggplant        lilac      anakiwa      mariner  bahama-blue 
-#>    "#FFFF99"    "#FFCC99"    "#FFCC66"    "#FF9933"    "#664466"    "#CC99CC"    "#99CCFF"    "#3366CC"    "#006699"
+#>  pale-canary        tanoi golden-tanoi  neon-carrot     eggplant        lilac 
+#>    "#FFFF99"    "#FFCC99"    "#FFCC66"    "#FF9933"    "#664466"    "#CC99CC" 
+#>      anakiwa      mariner  bahama-blue 
+#>    "#99CCFF"    "#3366CC"    "#006699"
 
 lcars_2357("lilac", "mariner") # select by name
 #>     lilac   mariner 
@@ -171,15 +177,17 @@ lcars_2357("lilac", "mariner") # select by name
 
 In addition to these and all the other predefined palettes, custom
 palettes can be constructed using official LCARS color names. This is
-like `colorRampPalette` but with the ability to recognize official LCARS
-color names. This functionality was leveraged by `scale_color_lcars1`
-and `scale_color_lcars2` seen above when making sequential or divergent
-palettes based on specific LCARS colors for use with ggplot.
+like `colorRampPalette()` but with the ability to recognize official
+LCARS color names. This functionality was leveraged by
+`scale_color_lcars1()` and `scale_color_lcars2()` seen above when making
+sequential or divergent palettes based on specific LCARS colors for use
+with ggplot.
 
 ``` r
 lcars_custom_pal <- lcars_colors_pal(c("pale-canary", "eggplant"))
 lcars_custom_pal(8)
-#> [1] "#FFFF99" "#E9E491" "#D3C98A" "#BDAE83" "#A7947B" "#917974" "#7B5E6D" "#664466"
+#> [1] "#FFFF99" "#E9E491" "#D3C98A" "#BDAE83" "#A7947B" "#917974" "#7B5E6D"
+#> [8] "#664466"
 
 p <- ggplot(diamonds, aes(carat, stat(count), fill = cut)) +
   geom_density(position = "fill")
@@ -208,11 +216,18 @@ p + scale_fill_lcars2("pale-canary", "danub", dark = TRUE, divergent = TRUE)
 ``` r
 # See available palette names
 trek_pal()
-#>  [1] "andorian"            "bajoran"             "borg"                "breen"               "breen2"              "dominion"            "enara"               "enara2"             
-#>  [9] "ferengi"             "gorn"                "iconian"             "klingon"             "lcars_series"        "lcars_2357"          "lcars_2369"          "lcars_2375"         
-#> [17] "lcars_2379"          "lcars_alt"           "lcars_first_contact" "lcars_nemesis"       "lcars_nx01"          "lcars_29c"           "lcars_23c"           "lcars_red_alert"    
-#> [25] "lcars_cardassian"    "romulan"             "romulan2"            "starfleet"           "starfleet2"          "tholian"             "terran"              "ufp"                
-#> [33] "red_alert"           "yellow_alert"        "black_alert"
+#>  [1] "andorian"            "bajoran"             "borg"               
+#>  [4] "breen"               "breen2"              "dominion"           
+#>  [7] "enara"               "enara2"              "ferengi"            
+#> [10] "gorn"                "iconian"             "klingon"            
+#> [13] "lcars_series"        "lcars_2357"          "lcars_2369"         
+#> [16] "lcars_2375"          "lcars_2379"          "lcars_alt"          
+#> [19] "lcars_first_contact" "lcars_nemesis"       "lcars_nx01"         
+#> [22] "lcars_29c"           "lcars_23c"           "lcars_red_alert"    
+#> [25] "lcars_cardassian"    "romulan"             "romulan2"           
+#> [28] "starfleet"           "starfleet2"          "tholian"            
+#> [31] "terran"              "ufp"                 "red_alert"          
+#> [34] "yellow_alert"        "black_alert"
 
 # view all predefined palettes
 view_trek_pals()
@@ -233,10 +248,8 @@ view_trek_pals()
 <div class="col-sm-10">
 
 <h4 style="padding:30px 0 0 0;margin-top:5px;margin-bottom:5px;">
-
 <a href="https://github.com/leonawicz/rtrek">rtrek</a>: The core Star
 Trek package
-
 </h4>
 
 Datasets related to Star Trek, API wrappers to external data sources,
@@ -259,10 +272,8 @@ and more.
 <div class="col-sm-10">
 
 <h4 style="padding:30px 0 0 0;margin-top:5px;margin-bottom:5px;">
-
 <a href="https://github.com/leonawicz/lcars">lcars</a>: LCARS aesthetic
 for Shiny
-
 </h4>
 
 Create Shiny apps based on the Library Computer Access/Retrieval System
@@ -285,10 +296,8 @@ Create Shiny apps based on the Library Computer Access/Retrieval System
 <div class="col-sm-10">
 
 <h4 style="padding:30px 0 0 0;margin-top:5px;margin-bottom:5px;">
-
 <a href="https://github.com/leonawicz/trekcolors">trekcolors</a>: A
 color palette package
-
 </h4>
 
 Predefined and customizable Star Trek themed color palettes and related
@@ -311,10 +320,8 @@ functions.
 <div class="col-sm-10">
 
 <h4 style="padding:30px 0 0 0;margin-top:5px;margin-bottom:5px;">
-
 <a href="https://github.com/leonawicz/trekfont">trekfont</a>: A fonts
 package
-
 </h4>
 
 True (Trek) type fonts to style your Star Trek themed graphics text.
@@ -327,8 +334,8 @@ True (Trek) type fonts to style your Star Trek themed graphics text.
 
 ## Citation
 
-Matthew Leonawicz (2021). trekcolors: Star Trek Color Palettes. R
-package version 0.1.3. <https://CRAN.R-project.org/package=trekcolors>
+Matthew Leonawicz (2024). trekcolors: Star Trek Color Palettes. R
+package version 0.2.0. <https://CRAN.R-project.org/package=trekcolors>
 
 ## Contribute
 
@@ -336,7 +343,7 @@ Contributions are welcome. Contribute through GitHub via pull request.
 Please create an issue first if it is regarding any substantive feature
 add or change.
 
------
+------------------------------------------------------------------------
 
 Please note that the `trekcolors` project is released with a
 [Contributor Code of

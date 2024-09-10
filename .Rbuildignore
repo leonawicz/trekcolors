@@ -7,10 +7,8 @@
 ^revdep$
 ^docs$
 ^pkgdown$
-^appveyor\.yml$
-^\.travis\.yml$
-^codecov\.yml$
 ^data-raw$
 ^README\.html$
 ^codemeta\.json$
 ^CRAN-RELEASE$
+^\.github$

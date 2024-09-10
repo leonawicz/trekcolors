@@ -1,3 +1,6 @@
+#' @name trekcolors
+"_PACKAGE"
+
 #' Star Trek color palettes.
 #'
 #' A named list of 35 Star Trek color palettes.
