@@ -25,10 +25,11 @@ lcars_2379(...)
 Obtain hex colors from standard LCARS color names.
 }
 \details{
-These functions return the hex colors for LCARS color names. If no argument is provided, the functions return their respective LCARS color set.
+These functions return the hex colors for LCARS color names. If no argument
+is provided, the functions return their respective LCARS color set.
 These functions correspond to LCARS color palettes that contain named colors.
-Other predefined LCARS color palettes are available but do not have names for each color.
-You can see all LCARS palettes with \code{\link{lcars_pals}}.
+Other predefined LCARS color palettes are available but do not have names for
+each color. You can see all LCARS palettes with \code{lcars_pals()}.
 }
 \examples{
 lcars_colors()
@@ -36,5 +37,5 @@ lcars_2357()
 lcars_colors("rust", "danub")
 }
 \seealso{
-\code{\link{lcars_pals}}
+\code{\link[=lcars_pals]{lcars_pals()}}
 }

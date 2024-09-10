@@ -2,16 +2,17 @@
 #'
 #' Obtain hex colors from standard LCARS color names.
 #'
-#' These functions return the hex colors for LCARS color names. If no argument is provided, the functions return their respective LCARS color set.
+#' These functions return the hex colors for LCARS color names. If no argument
+#' is provided, the functions return their respective LCARS color set.
 #' These functions correspond to LCARS color palettes that contain named colors.
-#' Other predefined LCARS color palettes are available but do not have names for each color.
-#' You can see all LCARS palettes with \code{\link{lcars_pals}}.
+#' Other predefined LCARS color palettes are available but do not have names for
+#' each color. You can see all LCARS palettes with `lcars_pals()`.
 #'
 #' @param ... character, LCARS color names.
 #'
 #' @export
 #' @name lcars_colors
-#' @seealso \code{\link{lcars_pals}}
+#' @seealso [lcars_pals()]
 #'
 #' @examples
 #' lcars_colors()
@@ -54,25 +55,31 @@ lcars_2379 <- function(...){
 #'
 #' Predefined and custom palettes based on LCARS colors.
 #'
-#' \code{lcars_pal} returns a predefined, qualitative LCARS color palette.
-#' \code{lcars_color_pal} returns a palette generator based on specific colors.
-#' \code{lcars_pals} is a function that takes no arguments and returns a list of all predefined LCARS palettes.
+#' `lcars_pal()` returns a predefined, qualitative LCARS color palette.
+#' `lcars_color_pal()` returns a palette generator based on specific colors.
+#' `lcars_pals()` is a function that takes no arguments and returns a list of
+#' all predefined LCARS palettes.
 #'
-#' Predefined palettes options for \code{palette} are \code{"2357"}, \code{"2369"}, \code{"2375"}, \code{"2379"},
-#' \code{"alt"}, \code{"first_contact"}, \code{"nemesis"}, \code{"nx01"}, \code{"23c"}, \code{"29c"}, \code{"red_alert"} and \code{"cardassian"}.
+#' Predefined palettes options for `palette` are `"2357"`, `"2369"`, `"2375"`,
+#' `"2379"`, `"alt"`, `"first_contact"`, `"nemesis"`, `"nx01"`, `"23c"`, `"29c"`,
+#' `"red_alert"` and `"cardassian"`.
 #'
-#' Custom palettes can also be constructed by passing a vector of colors to \code{palette} in \code{lcars_color_pal}.
-#' This is useful for sequential and divergent palettes.
-#' This is essentially a wrapper around \code{colorRampPalette} that understands LCARS color names.
-#' It accepts any color, allowing you to still use a color like \code{"white"} or \code{"#FFFFFF"} as the midpoint in a divergent palette for example.
-#' A special case is when you provide only a single color, e.g., \code{lcars_color_pal("husk")};
-#' this is equivalent to \code{lcars_color_pal(c("white", "husk"))}.
+#' Custom palettes can also be constructed by passing a vector of colors to
+#' `palette` in `lcars_color_pal()`. This is useful for sequential and divergent
+#' palettes. This is essentially a wrapper around `colorRampPalette()` that
+#' understands LCARS color names. It accepts any color, allowing you to still
+#' use a color like `"white"` or `"#FFFFFF"` as the midpoint in a divergent
+#' palette for example. A special case is when you provide only a single color,
+#' e.g., `lcars_color_pal("husk")`; this is equivalent to
+#' `lcars_color_pal(c("white", "husk"))`.
 #'
-#' @param palette character, name of a single predefined LCARS palette; or a vector of LCARS or other colors. See details.
+#' @param palette character, name of a single predefined LCARS palette; or a
+#' vector of LCARS or other colors. See details.
 #' @param reverse logical, reverse color order.
-#' @param ... additional arguments to pass to \code{colorRampPalette}.
+#' @param ... additional arguments to pass to `colorRampPalette()`.
 #'
-#' @return a palette generating function that takes an argument, \code{n}, the number of colors.
+#' @return a palette generating function that takes an argument, `n`, the number
+#' of colors.
 #' @export
 #'
 #' @examples
@@ -113,15 +120,19 @@ lcars_colors_pal <- function(palette, reverse = FALSE, ...){
 #'
 #' Scale functions used with ggplot2.
 #'
-#' @param palette character, name of palette in \code{lcars_pals}.
+#' @param palette character, name of palette in `lcars_pals()`.
 #' @param color character, LCARS color name for sequential palette.
 #' @param low character, LCARS color name.
 #' @param high character, LCARS color name.
 #' @param discrete logical, discrete or continuous palette.
 #' @param reverse logical, reverse color order.
-#' @param dark logical, use black instead of white for the base color in sequential palette or midpoint in divergent palette.
-#' @param divergent logical, use a divergent palette instead of two-color sequential palette.
-#' @param ... additional arguments passed to \code{ggplot2::discrete_scale} or \code{ggplot2::scale_*_gradientn}, for discrete or continuous palettes, respectively.
+#' @param dark logical, use black instead of white for the base color in
+#' sequential palette or midpoint in divergent palette.
+#' @param divergent logical, use a divergent palette instead of two-color
+#' sequential palette.
+#' @param ... additional arguments passed to `ggplot2::discrete_scale()` or
+#' `ggplot2::scale_*_gradientn()`, for discrete or continuous palettes,
+#' respectively.
 #'
 #' @export
 #' @name scale_lcars

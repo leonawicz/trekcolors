@@ -72,7 +72,8 @@
 
 
 <dl><dt id="arg-palette">palette<a class="anchor" aria-label="anchor" href="#arg-palette"></a></dt>
-<dd><p>character, name of a single predefined LCARS palette; or a vector of LCARS or other colors. See details.</p></dd>
+<dd><p>character, name of a single predefined LCARS palette; or a
+vector of LCARS or other colors. See details.</p></dd>
 
 
 <dt id="arg-reverse">reverse<a class="anchor" aria-label="anchor" href="#arg-reverse"></a></dt>
@@ -80,26 +81,31 @@
 
 
 <dt id="arg--">...<a class="anchor" aria-label="anchor" href="#arg--"></a></dt>
-<dd><p>additional arguments to pass to <code>colorRampPalette</code>.</p></dd>
+<dd><p>additional arguments to pass to <code><a href="https://rdrr.io/r/grDevices/colorRamp.html" class="external-link">colorRampPalette()</a></code>.</p></dd>
 
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>a palette generating function that takes an argument, <code>n</code>, the number of colors.</p>
+    <p>a palette generating function that takes an argument, <code>n</code>, the number
+of colors.</p>
     </div>
     <div id="details">
     <h2>Details</h2>
-    <p><code>lcars_pal</code> returns a predefined, qualitative LCARS color palette.
-<code>lcars_color_pal</code> returns a palette generator based on specific colors.
-<code>lcars_pals</code> is a function that takes no arguments and returns a list of all predefined LCARS palettes.</p>
-<p>Predefined palettes options for <code>palette</code> are <code>"2357"</code>, <code>"2369"</code>, <code>"2375"</code>, <code>"2379"</code>,
-<code>"alt"</code>, <code>"first_contact"</code>, <code>"nemesis"</code>, <code>"nx01"</code>, <code>"23c"</code>, <code>"29c"</code>, <code>"red_alert"</code> and <code>"cardassian"</code>.</p>
-<p>Custom palettes can also be constructed by passing a vector of colors to <code>palette</code> in <code>lcars_color_pal</code>.
-This is useful for sequential and divergent palettes.
-This is essentially a wrapper around <code>colorRampPalette</code> that understands LCARS color names.
-It accepts any color, allowing you to still use a color like <code>"white"</code> or <code>"#FFFFFF"</code> as the midpoint in a divergent palette for example.
-A special case is when you provide only a single color, e.g., <code>lcars_color_pal("husk")</code>;
-this is equivalent to <code>lcars_color_pal(c("white", "husk"))</code>.</p>
+    <p><code>lcars_pal()</code> returns a predefined, qualitative LCARS color palette.
+<code>lcars_color_pal()</code> returns a palette generator based on specific colors.
+<code>lcars_pals()</code> is a function that takes no arguments and returns a list of
+all predefined LCARS palettes.</p>
+<p>Predefined palettes options for <code>palette</code> are <code>"2357"</code>, <code>"2369"</code>, <code>"2375"</code>,
+<code>"2379"</code>, <code>"alt"</code>, <code>"first_contact"</code>, <code>"nemesis"</code>, <code>"nx01"</code>, <code>"23c"</code>, <code>"29c"</code>,
+<code>"red_alert"</code> and <code>"cardassian"</code>.</p>
+<p>Custom palettes can also be constructed by passing a vector of colors to
+<code>palette</code> in <code>lcars_color_pal()</code>. This is useful for sequential and divergent
+palettes. This is essentially a wrapper around <code><a href="https://rdrr.io/r/grDevices/colorRamp.html" class="external-link">colorRampPalette()</a></code> that
+understands LCARS color names. It accepts any color, allowing you to still
+use a color like <code>"white"</code> or <code>"#FFFFFF"</code> as the midpoint in a divergent
+palette for example. A special case is when you provide only a single color,
+e.g., <code>lcars_color_pal("husk")</code>; this is equivalent to
+<code>lcars_color_pal(c("white", "husk"))</code>.</p>
     </div>
 
     <div id="ref-examples">

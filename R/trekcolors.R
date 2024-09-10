@@ -10,19 +10,22 @@
 
 #' Star Trek color palettes
 #'
-#' Return a predefined Star Trek color palette from the \code{trekpals} dataset.
+#' Return a predefined Star Trek color palette from the `trekpals` dataset.
 #'
-#' Many of the palettes are qualitative, and not necessarily evenly spaced in terms of hue, saturation or brightness.
-#' This is because many palettes come from logos, symbols, insignia and other simple representations.
-#' However, several palettes have specifically been constructed as sequential or divergent if it made sense to do so based on the dominant colors present.
+#' Many of the palettes are qualitative, and not necessarily evenly spaced in
+#' terms of hue, saturation or brightness. This is because many palettes come
+#' from logos, symbols, insignia and other simple representations. However,
+#' several palettes have specifically been constructed as sequential or
+#' divergent if it made sense to do so based on the dominant colors present.
 #' Additional special functions exist for the subset of LCARS palettes.
 #'
-#' @param palette character, name of predefined palette. If missing, return all available palette names.
+#' @param palette character, name of predefined palette. If missing, return all
+#' available palette names.
 #' @param reverse logical, reverse color order.
 #'
 #' @return character vector of hex colors or palette names
 #' @export
-#' @seealso \code{\link{lcars_pals}}, \code{\link{scale_lcars}}
+#' @seealso [lcars_pals()], [scale_lcars()]
 #'
 #' @examples
 #' trek_pal("lcars_2357")
@@ -69,13 +72,17 @@ view_trek_pals <- function(palette){
 #'
 #' Scale functions used with ggplot2.
 #'
-#' Most palettes should be used as qualitative palettes. See \code{trekpals} to see how many colors are in each predefined palette.
-#' Use \code{view_trek_pals()} to plot all palettes to see which may work best for your purposes.
+#' Most palettes should be used as qualitative palettes. See `trekpals` to see
+#' how many colors are in each predefined palette. Use `view_trek_pals()` to
+#' plot all palettes to see which may work best for your purposes.
 #'
-#' @param palette character, name of Star Trek palette. See \code{trek_pal()} for list of palette names.
+#' @param palette character, name of Star Trek palette. See `trek_pal()` for
+#' a list of palette names.
 #' @param discrete logical, discrete or continuous palette.
 #' @param reverse logical, reverse color order.
-#' @param ... additional arguments passed to \code{ggplot2::discrete_scale} or \code{ggplot2::scale_*_gradientn}, for discrete or continuous palettes, respectively.
+#' @param ... additional arguments passed to `ggplot2::discrete_scale()` or
+#' `ggplot2::scale_*_gradientn()`, for discrete or continuous palettes,
+#' respectively.
 #'
 #' @export
 #' @name scale_trek

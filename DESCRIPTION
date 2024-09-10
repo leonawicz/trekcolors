@@ -6,8 +6,6 @@ Description: Provides a dataset of predefined color palettes based on the Star T
     and additional functions for generating customized palettes that are on theme. The package also offers functions for applying 
     the palettes to plots made using the 'ggplot2' package.
 License: MIT + file LICENSE
-Encoding: UTF-8
-LazyData: true
 URL: https://github.com/leonawicz/trekcolors
 BugReports: https://github.com/leonawicz/trekcolors/issues
 Depends: R (>= 2.10)
@@ -18,5 +16,8 @@ Suggests:
     knitr,
     rmarkdown,
     covr
-RoxygenNote: 7.3.2
+Encoding: UTF-8
 Language: en-US
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2

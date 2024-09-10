@@ -10,7 +10,8 @@ trek_pal(palette, reverse = FALSE)
 view_trek_pals(palette)
 }
 \arguments{
-\item{palette}{character, name of predefined palette. If missing, return all available palette names.}
+\item{palette}{character, name of predefined palette. If missing, return all
+available palette names.}
 
 \item{reverse}{logical, reverse color order.}
 }
@@ -21,9 +22,11 @@ character vector of hex colors or palette names
 Return a predefined Star Trek color palette from the \code{trekpals} dataset.
 }
 \details{
-Many of the palettes are qualitative, and not necessarily evenly spaced in terms of hue, saturation or brightness.
-This is because many palettes come from logos, symbols, insignia and other simple representations.
-However, several palettes have specifically been constructed as sequential or divergent if it made sense to do so based on the dominant colors present.
+Many of the palettes are qualitative, and not necessarily evenly spaced in
+terms of hue, saturation or brightness. This is because many palettes come
+from logos, symbols, insignia and other simple representations. However,
+several palettes have specifically been constructed as sequential or
+divergent if it made sense to do so based on the dominant colors present.
 Additional special functions exist for the subset of LCARS palettes.
 }
 \examples{
@@ -35,5 +38,5 @@ trek_pal()
 view_trek_pals()
 }
 \seealso{
-\code{\link{lcars_pals}}, \code{\link{scale_lcars}}
+\code{\link[=lcars_pals]{lcars_pals()}}, \code{\link[=scale_lcars]{scale_lcars()}}
 }

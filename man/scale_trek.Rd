@@ -11,20 +11,24 @@ scale_color_trek(palette = "starfleet", discrete = TRUE, reverse = FALSE, ...)
 scale_fill_trek(palette = "starfleet", discrete = TRUE, reverse = FALSE, ...)
 }
 \arguments{
-\item{palette}{character, name of Star Trek palette. See \code{trek_pal()} for list of palette names.}
+\item{palette}{character, name of Star Trek palette. See \code{trek_pal()} for
+a list of palette names.}
 
 \item{discrete}{logical, discrete or continuous palette.}
 
 \item{reverse}{logical, reverse color order.}
 
-\item{...}{additional arguments passed to \code{ggplot2::discrete_scale} or \code{ggplot2::scale_*_gradientn}, for discrete or continuous palettes, respectively.}
+\item{...}{additional arguments passed to \code{ggplot2::discrete_scale()} or
+\verb{ggplot2::scale_*_gradientn()}, for discrete or continuous palettes,
+respectively.}
 }
 \description{
 Scale functions used with ggplot2.
 }
 \details{
-Most palettes should be used as qualitative palettes. See \code{trekpals} to see how many colors are in each predefined palette.
-Use \code{view_trek_pals()} to plot all palettes to see which may work best for your purposes.
+Most palettes should be used as qualitative palettes. See \code{trekpals} to see
+how many colors are in each predefined palette. Use \code{view_trek_pals()} to
+plot all palettes to see which may work best for your purposes.
 }
 \examples{
 library(ggplot2)

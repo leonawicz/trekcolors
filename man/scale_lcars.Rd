@@ -51,23 +51,27 @@ scale_fill_lcars2(
 )
 }
 \arguments{
-\item{palette}{character, name of palette in \code{lcars_pals}.}
+\item{palette}{character, name of palette in \code{lcars_pals()}.}
 
 \item{discrete}{logical, discrete or continuous palette.}
 
 \item{reverse}{logical, reverse color order.}
 
-\item{...}{additional arguments passed to \code{ggplot2::discrete_scale} or \code{ggplot2::scale_*_gradientn}, for discrete or continuous palettes, respectively.}
+\item{...}{additional arguments passed to \code{ggplot2::discrete_scale()} or
+\verb{ggplot2::scale_*_gradientn()}, for discrete or continuous palettes,
+respectively.}
 
 \item{color}{character, LCARS color name for sequential palette.}
 
-\item{dark}{logical, use black instead of white for the base color in sequential palette or midpoint in divergent palette.}
+\item{dark}{logical, use black instead of white for the base color in
+sequential palette or midpoint in divergent palette.}
 
 \item{low}{character, LCARS color name.}
 
 \item{high}{character, LCARS color name.}
 
-\item{divergent}{logical, use a divergent palette instead of two-color sequential palette.}
+\item{divergent}{logical, use a divergent palette instead of two-color
+sequential palette.}
 }
 \description{
 Scale functions used with ggplot2.

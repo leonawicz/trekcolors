@@ -13,32 +13,38 @@ lcars_pal(palette = "2357", reverse = FALSE)
 lcars_colors_pal(palette, reverse = FALSE, ...)
 }
 \arguments{
-\item{palette}{character, name of a single predefined LCARS palette; or a vector of LCARS or other colors. See details.}
+\item{palette}{character, name of a single predefined LCARS palette; or a
+vector of LCARS or other colors. See details.}
 
 \item{reverse}{logical, reverse color order.}
 
-\item{...}{additional arguments to pass to \code{colorRampPalette}.}
+\item{...}{additional arguments to pass to \code{colorRampPalette()}.}
 }
 \value{
-a palette generating function that takes an argument, \code{n}, the number of colors.
+a palette generating function that takes an argument, \code{n}, the number
+of colors.
 }
 \description{
 Predefined and custom palettes based on LCARS colors.
 }
 \details{
-\code{lcars_pal} returns a predefined, qualitative LCARS color palette.
-\code{lcars_color_pal} returns a palette generator based on specific colors.
-\code{lcars_pals} is a function that takes no arguments and returns a list of all predefined LCARS palettes.
+\code{lcars_pal()} returns a predefined, qualitative LCARS color palette.
+\code{lcars_color_pal()} returns a palette generator based on specific colors.
+\code{lcars_pals()} is a function that takes no arguments and returns a list of
+all predefined LCARS palettes.
 
-Predefined palettes options for \code{palette} are \code{"2357"}, \code{"2369"}, \code{"2375"}, \code{"2379"},
-\code{"alt"}, \code{"first_contact"}, \code{"nemesis"}, \code{"nx01"}, \code{"23c"}, \code{"29c"}, \code{"red_alert"} and \code{"cardassian"}.
+Predefined palettes options for \code{palette} are \code{"2357"}, \code{"2369"}, \code{"2375"},
+\code{"2379"}, \code{"alt"}, \code{"first_contact"}, \code{"nemesis"}, \code{"nx01"}, \code{"23c"}, \code{"29c"},
+\code{"red_alert"} and \code{"cardassian"}.
 
-Custom palettes can also be constructed by passing a vector of colors to \code{palette} in \code{lcars_color_pal}.
-This is useful for sequential and divergent palettes.
-This is essentially a wrapper around \code{colorRampPalette} that understands LCARS color names.
-It accepts any color, allowing you to still use a color like \code{"white"} or \code{"#FFFFFF"} as the midpoint in a divergent palette for example.
-A special case is when you provide only a single color, e.g., \code{lcars_color_pal("husk")};
-this is equivalent to \code{lcars_color_pal(c("white", "husk"))}.
+Custom palettes can also be constructed by passing a vector of colors to
+\code{palette} in \code{lcars_color_pal()}. This is useful for sequential and divergent
+palettes. This is essentially a wrapper around \code{colorRampPalette()} that
+understands LCARS color names. It accepts any color, allowing you to still
+use a color like \code{"white"} or \code{"#FFFFFF"} as the midpoint in a divergent
+palette for example. A special case is when you provide only a single color,
+e.g., \code{lcars_color_pal("husk")}; this is equivalent to
+\code{lcars_color_pal(c("white", "husk"))}.
 }
 \examples{
 # All predefined LCARS palettes
