@@ -10,5 +10,4 @@
 ^data-raw$
 ^README\.html$
 ^codemeta\.json$
-^CRAN-RELEASE$
 ^\.github$
